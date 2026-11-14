@@ -11,110 +11,133 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-<header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
-    
-    <!-- Contenedor principal con el logo muy grande y los títulos -->
-    <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
-        
-        <!-- LOGO GRANDE (Tamaño de 11rem / ~176px) -->
-        <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
-        
-        <!-- TÍTULOS AL LADO (Sin la mariposa) -->
-        <div>
-            <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
-                Café Macondo
-            </h1>
-            <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-               Tradición y Sabor Colombiano en cada Taza
-            </p>
+    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
+        <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
+            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
+            <div>
+                <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
+                    Reserva tu Mesa
+                </h1>
+                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                    Café Macondo
+                </p>
+                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                    Tradicion y Sabor Colombiano en Cada Taza
+                </p>
+            </div>
         </div>
+        <nav aria-label="Menú principal">
+            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
+                <li><a href="index.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
+                <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
+                <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
+                <li><a href="reservas.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </div>
+    <main>
+        <!-- Título principal de la sección abarcando todo el ancho -->
+        <section class="bloque-destacado" style="grid-column: 1 / -1; margin-bottom: 1rem;">
+            <h2 style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">Reserva Tu Mesa en Café Macondo</h2>
+            <p style="color: var(--color-text-light); max-width: 75ch;">Aparta tu espacio con anticipación para disfrutar de tus preparaciones favoritas sin esperas. Ideal para encuentros de trabajo, celebraciones íntimas o simplemente garantizar tu rincón favorito de lectura.</p>
+        </section>
 
-    <!-- Menú de navegación -->
-    <nav aria-label="Menú principal">
-        <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
-            <li><a href="index.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
-            <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
-            <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
-            <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
-        </ul>
-    </nav>
-</header>
-
-    <main class="bloque-destacado" style="grid-column: 1 / -1;">
-        <section>
-            <h2>Aparta tu espacio con anticipación</h2>
-            <p>Completa el formulario para asegurar tu mesa en cualquiera de nuestras tres sedes de Café Macondo.</p>
+        <!-- COLUMNA IZQUIERDA: El Formulario (ocupa 2 columnas en pantallas grandes) -->
+        <section style="grid-column: span 2; background: var(--color-card-bg); padding: 2.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
+            <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: var(--color-primary); border-bottom: 0.125rem solid var(--color-accent); padding-bottom: 0.5rem;">1. Información de Contacto y Reserva</h3>
 
             <form action="#" method="post">
-                <fieldset>
-                    <legend>Datos Personales y de Contacto</legend>
+                <fieldset style="border: none; padding: 0; margin-bottom: 2rem;">
                     
-                    <div>
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Jaimes" required>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="nombre" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Nombre completo y apellidos:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Camila Morales Restrepo" required style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem;">
                     </div>
 
-                    <div>
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" placeholder="tucorreo@dominio.com" required>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="correo" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Correo electrónico de confirmación:</label>
+                        <input type="email" id="correo" name="correo" placeholder="camila.morales@ejemplo.com" required style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem;">
                     </div>
 
-                    <div>
-                        <label for="telefono">Número de teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="3001234567" required>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="telefono" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Número telefónico de contacto:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+57 310 987 6543" required style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem;">
                     </div>
-                </fieldset>
 
-                <fieldset>
-                    <legend>Detalles de la Reserva</legend>
-
-                    <div>
-                        <label for="sede">Seleccione la sede:</label>
-                        <select id="sede" name="sede" required>
-                            <option value="">-- Elija una opción --</option>
-                            <option value="centro">Centro Histórico</option>
-                            <option value="norte">Parque Norte</option>
-                            <option value="mirador">Mirador Alto</option>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="sede" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Seleccione la sede:</label>
+                        <select id="sede" name="sede" required style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem; background: #fff;">
+                            <option value="">-- Elige una sede --</option>
+                            <option value="centro">Sede Centro Histórico (Casa de los Buendía)</option>
+                            <option value="norte">Sede Parque Norte (Plenilunio de Mariposas)</option>
+                            <option value="mirador">Sede Mirador Alto</option>
                         </select>
                     </div>
 
-                    <div>
-                        <label for="fecha">Fecha de reserva:</label>
-                        <input type="date" id="fecha" name="fecha" required>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="fecha" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Fecha de reserva:</label>
+                            <input type="date" id="fecha" name="fecha" required style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="hora" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Hora estimada:</label>
+                            <input type="time" id="hora" name="hora" required style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--color-primary);">Tipo de ocasión:</label>
+                        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                            <label style="font-weight: normal;"><input type="radio" name="ocasion" value="casual" checked> Casual</label>
+                            <label style="font-weight: normal;"><input type="radio" name="ocasion" value="trabajo"> Trabajo / Reunión</label>
+                            <label style="font-weight: normal;"><input type="radio" name="ocasion" value="celebracion"> Celebración</label>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="comentarios" style="display: block; font-weight: 500; margin-bottom: 0.375rem; color: var(--color-primary);">Comentarios o solicitudes especiales:</label>
+                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="¿Alguna alergia o requerimiento especial?" style="width: 100%; padding: 0.75rem; border: 0.0625rem solid #ccc; border-radius: 0.375rem; font-size: 1rem;"></textarea>
                     </div>
 
                     <div>
-                        <label for="hora">Hora:</label>
-                        <input type="time" id="hora" name="hora" required>
-                    </div>
-
-                    <div>
-                        <label>Tipo de ocasión:</label>
-                        <label><input type="radio" name="ocasion" value="casual" checked> Casual</label>
-                        <label><input type="radio" name="ocasion" value="trabajo"> Trabajo / Reunión</label>
-                        <label><input type="radio" name="ocasion" value="celebracion"> Celebración</label>
-                    </div>
-
-                    <div>
-                        <label for="comentarios">Comentarios o solicitudes especiales:</label>
-                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="¿Alguna alergia o requerimiento especial?"></textarea>
-                    </div>
-
-                    <div>
-                        <label>
+                        <label style="font-weight: normal; display: flex; align-items: center; gap: 0.5rem;">
                             <input type="checkbox" name="terminos" required> Acepto las políticas de reserva y privacidad del establecimiento.
                         </label>
                     </div>
                 </fieldset>
 
-                <button type="submit">Confirmar Reserva</button>
+                <button type="submit" style="background-color: var(--color-primary); color: var(--color-white); border: none; padding: 1rem 2rem; font-size: 1.1rem; font-weight: bold; border-radius: 0.375rem; cursor: pointer; width: 100%; transition: background-color 0.2s ease;">Confirmar Reserva</button>
             </form>
         </section>
+
+        <!-- COLUMNA DERECHA: Políticas, Horarios de Cancelación, Reagendamiento y Beneficios (ocupa 1 columna) -->
+        <aside style="grid-column: span 1; background: var(--color-card-bg); padding: 2.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15); height: fit-content;">
+            
+            <h3 style="margin-top: 0; color: var(--color-primary); font-size: 1.4rem; border-bottom: 0.125rem solid var(--color-accent); padding-bottom: 0.5rem; margin-bottom: 1rem;">Beneficios de Reservar</h3>
+            <ul style="padding-left: 1.2rem; color: var(--color-text); font-size: 0.92rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.4rem;"><strong>Atención preferencial:</strong> Tu mesa estará lista al llegar sin filas ni esperas.</li>
+                <li style="margin-bottom: 0.4rem;"><strong>Rincón garantizado:</strong> Ideal para lectura, trabajo o reuniones privadas.</li>
+                <li><strong>Obsequio de bienvenida:</strong> Degustación de nuestro café de origen del día.</li>
+            </ul>
+
+            <h3 style="color: var(--color-primary); font-size: 1.4rem; border-bottom: 0.125rem solid var(--color-accent); padding-bottom: 0.5rem; margin-bottom: 1rem;">Horarios y Cancelación</h3>
+            <ul style="padding-left: 1.2rem; color: var(--color-text); font-size: 0.92rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.4rem;"><strong>Tolerancia:</strong> Se guardará tu mesa hasta con 15 minutos de cortesía.</li>
+                <li style="margin-bottom: 0.4rem;"><strong>Cancelaciones:</strong> Sin costo hasta 2 horas antes de la hora elegida.</li>
+                <li><strong>Reagendamiento:</strong> Puedes modificar fecha u hora directamente contactando a la sede con antelación.</li>
+            </ul>
+
+            <h3 style="color: var(--color-primary); font-size: 1.4rem; border-bottom: 0.125rem solid var(--color-accent); padding-bottom: 0.5rem; margin-bottom: 1rem;">Pasos de Confirmación</h3>
+            <ol style="padding-left: 1.2rem; color: var(--color-text); font-size: 0.92rem; line-height: 1.5; margin: 0;">
+                <li style="margin-bottom: 0.4rem;">Completas el formulario con tus datos y preferencias.</li>
+                <li style="margin-bottom: 0.4rem;">Recibes una notificación automática en tu correo electrónico.</li>
+                <li>Te esperamos en la sede seleccionada.</li>
+            </ol>
+        </aside>
     </main>
 
-    <footer>
+    <footer style="margin-top: 4rem;">
         <p>&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
     </footer>
 </body>

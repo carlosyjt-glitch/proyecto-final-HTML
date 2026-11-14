@@ -11,36 +11,30 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-<header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
-    
-    <!-- Contenedor principal con el logo muy grande y los títulos -->
-    <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
-        
-        <!-- LOGO GRANDE (Tamaño de 11rem / ~176px) -->
-        <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
-        
-        <!-- TÍTULOS AL LADO (Sin la mariposa) -->
-        <div>
-            <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
-                Café Macondo
-            </h1>
-            <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                Tradición y Sabor Colombiano en cada Taza
-            </p>
+    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
+        <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
+            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
+            <div>
+                <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
+                    Nuestras Sedes
+                </h1>
+                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                    Café Macondo
+                </p>
+                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                    Tradicion y Sabor Colombiano en Cada Taza
+                </p>
+            </div>
         </div>
-
-    </div>
-
-    <!-- Menú de navegación -->
-    <nav aria-label="Menú principal">
-        <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
-            <li><a href="index.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
-            <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
-            <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
-            <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav aria-label="Menú principal">
+            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
+                <li><a href="index.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
+                <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
+                <li><a href="sedes.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
+                <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="bloque-destacado" style="grid-column: 1 / -1;">

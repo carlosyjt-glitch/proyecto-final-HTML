@@ -11,87 +11,84 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-<header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
-    
-    <!-- Contenedor principal con el logo muy grande y los títulos -->
-    <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
-        
-        <!-- LOGO GRANDE (Tamaño de 11rem / ~176px) -->
-        <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
-        
-        <!-- TÍTULOS AL LADO (Sin la mariposa) -->
-        <div>
-            <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
-                Café Macondo
-            </h1>
-            <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                Tradición y Sabor Colombiano en cada Taza
-            </p>
+    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
+        <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
+            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
+            <div>
+                <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
+                    Nuestra Carta
+                </h1>
+                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                    Café Macondo
+                </p>
+                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                    Tradicion y Sabor Colombiano en Cada Taza
+                </p>
+            </div>
         </div>
+        <nav aria-label="Menú principal">
+            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
+                <li><a href="index.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
+                <li><a href="carta.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
+                <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
+                <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </div>
-
-    <!-- Menú de navegación -->
-    <nav aria-label="Menú principal">
-        <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
-            <li><a href="index.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
-            <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
-            <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
-            <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
-        </ul>
-    </nav>
-</header>
     <main>
         <!-- Índice con anclas internas -->
-        <nav aria-label="Índice de la carta" style="grid-column: 1 / -1; background: var(--color-card-bg); padding: 1rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-            <p style="margin-bottom: 0.5rem; font-weight: bold;">Ir a sección:</p>
-            <ul style="display: flex; gap: 1.5rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap;">
+        <nav aria-label="Índice de la carta" style="grid-column: 1 / -1; background: var(--color-card-bg); padding: 1.2rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15); margin-bottom: 1rem;">
+            <p style="margin-bottom: 0.5rem; font-weight: bold; color: var(--color-primary);">Ir a sección de la carta:</p>
+            <ul style="display: flex; gap: 2rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap;">
                 <li><a href="#bebidas" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Bebidas Clásicas</a></li>
                 <li><a href="#metodos" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Métodos de Filtrado</a></li>
                 <li><a href="#acompanamientos" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">Acompañamientos</a></li>
             </ul>
         </nav>
 
-        <section id="bebidas">
+        <!-- Sección de Bebidas ocupando todo el ancho para que la tabla respire -->
+        <section id="bebidas" style="grid-column: 1 / -1;">
             <h2>Bebidas Clásicas</h2>
             <div class="table-container">
-                <table>
+                <table style="width: 100%; border-collapse: collapse;">
                     <caption>Precios de cafés tradicionales y de especialidad</caption>
                     <thead>
                         <tr>
-                            <th scope="col">Bebida</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Precio (COP)</th>
+                            <th scope="col" style="width: 25%;">Bebida</th>
+                            <th scope="col" style="width: 55%;">Descripción</th>
+                            <th scope="col" style="width: 20%; text-align: right;">Precio (COP)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Espresso Macondo</td>
+                            <td><strong>Espresso Macondo</strong></td>
                             <td>Doble carga concentrada con notas a chocolate amargo.</td>
-                            <td>$ 5.500</td>
+                            <td style="text-align: right; font-weight: 600; color: var(--color-primary); white-space: nowrap;">$ 5.500</td>
                         </tr>
                         <tr>
-                            <td>Latte</td>
+                            <td><strong>Latte</strong></td>
                             <td>Espresso con leche texturizada y capa suave de microespuma.</td>
-                            <td>$ 7.800</td>
+                            <td style="text-align: right; font-weight: 600; color: var(--color-primary); white-space: nowrap;">$ 7.800</td>
                         </tr>
                         <tr>
-                            <td>Cappuccino</td>
+                            <td><strong>Cappuccino</strong></td>
                             <td>Equilibrio perfecto entre espresso, leche vaporizada y espuma densa.</td>
-                            <td>$ 7.500</td>
+                            <td style="text-align: right; font-weight: 600; color: var(--color-primary); white-space: nowrap;">$ 7.500</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
+        <!-- Métodos y Acompañamientos organizados en dos columnas limpias -->
         <section id="metodos">
             <h2>Métodos de Filtrado</h2>
             <p>Disfruta de extracciones limpias que resaltan la acidez brillante y los perfiles frutales de nuestros granos.</p>
             <ul>
-                <li>V60: Taza limpia y aromática.</li>
-                <li>Chemex: Cuerpo sedoso y notas florales destacadas.</li>
-                <li>Prensa Francesa: Cuerpo completo y aceites esenciales preservados.</li>
+                <li><strong>V60:</strong> Taza limpia y aromática.</li>
+                <li><strong>Chemex:</strong> Cuerpo sedoso y notas florales destacadas.</li>
+                <li><strong>Prensa Francesa:</strong> Cuerpo completo y aceites esenciales preservados.</li>
             </ul>
         </section>
 
