@@ -1,0 +1,176 @@
+/* --- UNIDAD 04 y 05: Componentes y Estados (hover, focus, BEM) --- */
+
+/* Cabecera y Menú de navegación */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 0.25rem solid var(--color-accent);
+}
+
+header h1, header p {
+    color: var(--color-white);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Unidad 04.3: Estados hover y focus obligatorios con buen contraste */
+nav a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
+}
+
+nav a:focus {
+    outline: 0.1875rem solid var(--color-focus);
+    outline-offset: 0.125rem;
+}
+
+/* Unidad 04.4: La página actual se distingue en el menú */
+nav a[aria-current="page"] {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Botones y campos de formulario */
+button, input[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: 0.1875rem solid var(--color-focus);
+    outline-offset: 0.125rem;
+}
+
+/* Formularios estructurados */
+fieldset {
+    border: 0.0625rem solid var(--color-accent);
+    border-radius: 0.375rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-white);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 0.5rem;
+}
+
+form div {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.375rem;
+    color: var(--color-primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.375rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Listas personalizadas */
+main ul, main ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+dl {
+    margin-bottom: 1.5rem;
+}
+
+dt {
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 0.75rem;
+}
+
+dd {
+    margin-left: 0;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Cita (Blockquote) */
+blockquote {
+    border-left: 0.25rem solid var(--color-accent);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(194, 139, 73, 0.08);
+    font-style: italic;
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+blockquote footer {
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: var(--color-secondary);
+}
+
+/* Figuras e imágenes flexibles */
+figure {
+    margin: 1.5rem 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+    display: block;
+}
+
+figcaption {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-top: 0.5rem;
+}

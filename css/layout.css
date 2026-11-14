@@ -1,0 +1,69 @@
+/* --- UNIDAD 06 y 07: Layout Adaptable, Grid y Unidades Relativas --- */
+
+/* Contenedor principal de las páginas con enfoque móvil primero (1 columna) */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Unidad 07.2: Una columna en móvil */
+    gap: 2rem;                  /* Unidad 07.6: Espacios estrictamente con gap */
+    width: 100%;
+}
+
+/* Unidad 07.4: La cabecera y el pie ocupan todo el ancho de la grilla si están dentro de un contexto grid */
+header, footer {
+    grid-column: 1 / -1;
+}
+
+/* Unidad 06.4: Uso de unidad de ventana (vh) para una sección de portada o héroe opcional */
+.hero-portada {
+    min-height: 50vh; /* Ocupa al menos la mitad de la altura de la ventana */
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(44, 29, 17, 0.8), rgba(44, 29, 17, 0.8)), 
+                url('../../imagenes/fondo-textura.jpg');
+    color: var(--color-white);
+    border-radius: 0.5rem;
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Unidad 07.5: Galería o tarjetas de productos que se acomodan sola sin consultas (auto-fit y minmax) */
+.card-grid, .galeria-sedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+    grid-column: 1 / -1; /* Permite que la galería ocupe todo el ancho disponible */
+}
+
+/* Unidad 07.4: Al menos un bloque ocupa dos columnas en pantallas grandes */
+.bloque-destacado {
+    grid-column: span 1; /* Por defecto en móvil */
+}
+
+
+/* =================================================================atiende
+   PUNTOS DE RUPTURA (MEDIA QUERIES) - Escritas de menor a mayor (Unidad 07.3)
+   =================================================================== */
+
+/* 1. Primer punto de ruptura: Desde 600px (aprox 37.5rem) -> Dos columnas */
+@media (min-width: 37.5rem) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Unidad 07.3: Dos columnas desde 600px */
+    }
+
+    /* Unidad 07.4: Un bloque específico ocupa 2 columnas */
+    .bloque-destacado {
+        grid-column: span 2;
+    }
+}
+
+/* 2. Segundo punto de ruptura: Desde 900px (aprox 56.25rem) -> Tres columnas */
+@media (min-width: 56.25rem) {
+    main {
+        grid-template-columns: repeat(3, 1fr); /* Unidad 07.3: Tres columnas desde 900px */
+    }
+
+    .bloque-destacado {
+        grid-column: span 2; /* Sigue destacando abarcando dos espacios */
+    }
+}

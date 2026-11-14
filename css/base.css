@@ -1,0 +1,40 @@
+/* --- UNIDAD 03 y 05: Variables, Reseteo y Base --- */
+:root {
+    --color-primary: #24160d;   /* Café oscuro profundo */
+    --color-secondary: #4a2e1b; /* Café medio */
+    --color-accent: #e6af2e;    /* ¡El nuevo Amarillo Mariposa de Macondo! */
+    --color-bg: #fcfbfa;        /* Crema pergamino suave */
+    --color-card-bg: #ffffff;   /* Blanco puro para tarjetas */
+    --color-text: #2b2b2b;      /* Gris oscuro para lectura */
+    --color-text-light: #555555;
+    --color-white: #ffffff;
+    --color-focus: #1d6fa5;
+}
+
+html {
+    font-size: 100%; /* Unidad 06.1 */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box; /* Unidad 05.4 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text); /* Herencia aplicada (Unidad 03.4) */
+    /* Unidad 03.3: Imagen de fondo con gradiente y transparencia rgba */
+    background-image: linear-gradient(rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.92)), 
+                      url('../imagenes/fondo-textura.jpg');
+    background-repeat: repeat;
+}
+
+/* Centrado global con ancho máximo (Unidad 05.4) */
+body > header, main, footer {
+    max-width: 75rem; /* Ancho máximo amplio */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Macondo — Inicio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tipografia.css">
+    <link rel="stylesheet" href="css/cajas.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
+    
+    <!-- Contenedor principal con el logo muy grande y los títulos -->
+    <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
+        
+        <!-- LOGO GRANDE (Tamaño de 11rem / ~176px) -->
+        <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
+        
+        <!-- TÍTULOS AL LADO (Sin la mariposa) -->
+        <div>
+            <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
+                Café Macondo
+            </h1>
+            <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
+                Tradición y Sabor Colombiano en cada Taza
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav aria-label="Menú principal">
+        <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
+            <li><a href="index.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
+            <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
+            <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
+            <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+    <section class="bloque-destacado" style="grid-column: 1 / -1; padding: 0; overflow: hidden; border-radius: 0.5rem; margin-bottom: 2rem;">
+        <img src="imagenes/banner-macondo.jpg" alt="Banner Café Macondo" style="width: 100%; height: auto; display: block;">
+    </section>
+
+    <section>
+<h2>El realismo mágico de nuestras montañas</h2>
+<p>En <strong>Café Macondo</strong> creemos que el buen café, al igual que las mejores historias, detiene el tiempo. Cada grano es cosechado bajo el sol de nuestras cordilleras, evocando aromas inmemoriales y la calidez de un pueblo donde siempre es primavera.</p>
+    </section>
+
+    <section>
+        <h2>Lo que dicen nuestros visitantes</h2>
+        <blockquote>
+            <p>"Tomar un espresso aquí es como abrir un libro de García Márquez: cada sorbo te envuelve en una atmósfera de mariposas amarillas y tradición pura."</p>
+            <footer>— <cite>Sofía Martínez, Crítica Literaria y Gastronómica</cite></footer>
+        </blockquote>
+    </section>
+
+    <aside>
+        <h3>Cosecha Aureliano Buendía</h3>
+        <p>Descubre nuestra edición especial de temporada con notas a vainilla silvestre y panela artesanal.</p>
+    </aside>
+</main>
+
+    <footer>
+        <p>&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
+        <p>Conoce más sobre el café colombiano en <a href="https://www.federaciondecafeteros.org" target="_blank" rel="noopener noreferrer">FNC</a>.</p>
+    </footer>
+</body>
+</html>
