@@ -11,114 +11,111 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-    <!-- Encabezado Principal -->
-    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
-        <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
-            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
-            <div>
-                <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
-                    Nuestras Sedes
-                </h1>
-                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                    Café Macondo
-                </p>
-                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                    Tradicion y Sabor Colombiano en Cada Taza
-                </p>
+    <header class="header">
+        <div class="header__grid">
+            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" class="header__logo">
+            <div class="header__text-container">
+                <h1 class="header__title">Nuestras Sedes</h1>
+                <p class="header__subtitle">Café Macondo</p>
+                <p class="header__subtitle">Tradición y Sabor Colombiano en Cada Taza</p>
             </div>
         </div>
-        <nav aria-label="Menú principal">
-            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
-                <li><a href="index.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
-                <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
-                <li><a href="sedes.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
-                <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+        <nav aria-label="Menú principal" class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="carta.html" class="nav__link">Carta</a></li>
+                <li><a href="sedes.html" aria-current="page" class="nav__link">Sedes</a></li>
+                <li><a href="reservas.html" class="nav__link">Reservas</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main-container">
         <!-- SECCIÓN DE VIDEO PROMOCIONAL -->
-        <section style="grid-column: 1 / -1; margin-bottom: 3rem; text-align: center;">
-            <h2 style="font-family: Georgia, serif; font-size: 2.2rem; color: var(--color-primary); margin-bottom: 0.5rem;">
-                Vive la Experiencia Macondo
-            </h2>
-            <p style="color: var(--color-text-light); margin-bottom: 2rem; max-width: 65ch; margin-left: auto; margin-right: auto;">
+        <section class="video-section">
+            <h2 class="section-title">Vive la Experiencia Macondo</h2>
+            <p class="section-desc">
                 Descubre la calidez de nuestros espacios, donde cada cliente entra buscando un buen café y sale con una sonrisa inolvidable.
             </p>
 
-            <div style="max-width: 800px; margin: 0 auto; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2); border: 0.125rem solid var(--color-accent);">
-                <video controls width="100%" style="display: block; height: auto;" poster="imagenes/banner-macondo.jpg">
+            <div class="video-container">
+                <video controls class="video-element" poster="imagenes/banner-macondo.jpg">
                     <source src="videos/experiencia-cafe.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
             </div>
         </section>
 
-        <!-- SECCIÓN DE SEDES CON DATOS AMPLIADOS -->
-        <section style="grid-column: 1 / -1;">
-            <div style="text-align: center; margin-bottom: 2.5rem;">
-                <h2 style="font-family: Georgia, serif; font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">Encuéntranos en la Ciudad</h2>
-                <p style="color: var(--color-text-light); font-size: 1.1rem; max-width: 70ch; margin: 0 auto;">Contamos con tres espacios únicos diseñados para conversar, trabajar o disfrutar de un buen libro bajo la inspiración del realismo mágico.</p>
+        <!-- SECCIÓN DE SEDES -->
+        <section class="sedes-section">
+            <div class="sedes-header">
+                <h2 class="section-title">Encuéntranos en la Ciudad</h2>
+                <p class="section-desc">Contamos con tres espacios únicos diseñados para conversar, trabajar o disfrutar de un buen libro bajo la inspiración del realismo mágico.</p>
             </div>
 
-            <!-- Cuadrícula de Sedes -->
             <div class="card-grid">
-                
                 <!-- Sede 1: Centro Histórico -->
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/sede-centro.jpg" alt="Sede Centro Histórico" style="width: 100%; height: 14rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem;">Sede Centro Histórico</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem; margin-bottom: 1rem;">Ambiente clásico colonial, muros de piedra y tragaluz central. Ideal para sumergirse en la lectura y disfrutar de un espresso tradicional.</p>
+                <article class="card">
+                    <figure class="sede-figure">
+                        <img src="imagenes/sede-centro.jpg" alt="Sede Centro Histórico" class="sede-img">
+                        <figcaption class="sede-caption">Fachada interna - Sede Centro Histórico</figcaption>
+                    </figure>
+                    <h3 class="card-title">Sede Centro Histórico</h3>
+                    <p class="card-text">Ambiente clásico colonial, muros de piedra y tragaluz central. Ideal para sumergirse en la lectura y disfrutar de un espresso tradicional.</p>
                     
-                    <div style="font-size: 0.9rem; color: var(--color-text); line-height: 1.6; margin-bottom: 1.2rem; background: var(--color-bg); padding: 0.75rem; border-radius: 0.375rem;">
-                        <p style="margin: 0 0 0.3rem 0;"><strong>📍 Dirección:</strong> Calle Real # 12-45</p>
-                        <p style="margin: 0 0 0.3rem 0;"><strong>📞 Teléfono:</strong> (607) 642 1001</p>
-                        <p style="margin: 0 0 0.3rem 0;"><strong>⏰ Horarios:</strong> Lunes a Domingo: 7:00 a.m. - 9:00 p.m.</p>
-                        <p style="margin: 0;"><strong>☕ Especialidad:</strong> Espresso doble y repostería artesanal.</p>
+                    <div class="sede-info-box">
+                        <p><strong>📍 Dirección:</strong> Calle Real # 12-45</p>
+                        <p><strong>📞 Teléfono:</strong> (607) 642 1001</p>
+                        <p><strong>⏰ Horarios:</strong> Lunes a Domingo: 7:00 a.m. - 9:00 p.m.</p>
+                        <p><strong>☕ Especialidad:</strong> Espresso doble y repostería artesanal.</p>
                     </div>
 
-                    <a href="reservas.html" style="display: block; text-align: center; background-color: var(--color-primary); color: var(--color-white); padding: 0.6rem; border-radius: 0.3rem; text-decoration: none; font-weight: 600;">Reservar en esta sede</a>
+                    <a href="reservas.html" class="btn-card">Reservar en esta sede</a>
                 </article>
 
                 <!-- Sede 2: Parque Norte -->
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/sede-norte.jpg" alt="Sede Parque Norte" style="width: 100%; height: 14rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem;">Sede Parque Norte</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem; margin-bottom: 1rem;">Espacio amplio, luminoso y rodeado de vegetación. Un concepto abierto ideal para compartir en grupo y disfrutar filtrados de altura.</p>
+                <article class="card">
+                    <figure class="sede-figure">
+                        <img src="imagenes/sede-norte.jpg" alt="Sede Parque Norte" class="sede-img">
+                        <figcaption class="sede-caption">Zona abierta - Sede Parque Norte</figcaption>
+                    </figure>
+                    <h3 class="card-title">Sede Parque Norte</h3>
+                    <p class="card-text">Espacio amplio, luminoso y rodeado de vegetación. Un concepto abierto ideal para compartir en grupo y disfrutar filtrados de altura.</p>
                     
-                    <div style="font-size: 0.9rem; color: var(--color-text); line-height: 1.6; margin-bottom: 1.2rem; background: var(--color-bg); padding: 0.75rem; border-radius: 0.375rem;">
-                        <p style="margin: 0 0 0.3rem 0;"><strong>📍 Dirección:</strong> Carrera 45 # 85-10</p>
-                        <p style="margin: 0 0 0.3rem 0;"><strong>📞 Teléfono:</strong> (607) 643 2289</p>
-                        <p style="margin: 0 0 0.3rem 0;"><strong>⏰ Horarios:</strong> Lunes a Domingo: 8:00 a.m. - 10:00 p.m.</p>
-                        <p style="margin: 0;"><strong>☕ Especialidad:</strong> Métodos de filtrado V60 y Chemex.</p>
+                    <div class="sede-info-box">
+                        <p><strong>📍 Dirección:</strong> Carrera 45 # 85-10</p>
+                        <p><strong>📞 Teléfono:</strong> (607) 643 2289</p>
+                        <p><strong>⏰ Horarios:</strong> Lunes a Domingo: 8:00 a.m. - 10:00 p.m.</p>
+                        <p><strong>☕ Especialidad:</strong> Métodos de filtrado V60 y Chemex.</p>
                     </div>
 
-                    <a href="reservas.html" style="display: block; text-align: center; background-color: var(--color-primary); color: var(--color-white); padding: 0.6rem; border-radius: 0.3rem; text-decoration: none; font-weight: 600;">Reservar en esta sede</a>
+                    <a href="reservas.html" class="btn-card">Reservar en esta sede</a>
                 </article>
 
                 <!-- Sede 3: Mirador Alto -->
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/sede-mirador.jpg" alt="Sede Mirador Alto" style="width: 100%; height: 14rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem;">Sede Mirador Alto</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem; margin-bottom: 1rem;">Estilo moderno ubicado en zona campestre. Perfecto para desconectarse, disfrutar de la vista panorámica y café de especialidad.</p>
+                <article class="card">
+                    <figure class="sede-figure">
+                        <img src="imagenes/sede-mirador.jpg" alt="Sede Mirador Alto" class="sede-img">
+                        <figcaption class="sede-caption">Vista panorámica - Sede Mirador Alto</figcaption>
+                    </figure>
+                    <h3 class="card-title">Sede Mirador Alto</h3>
+                    <p class="card-text">Estilo moderno ubicado en zona campestre. Perfecto para desconectarse, disfrutar de la vista panorámica y café de especialidad.</p>
                     
-                    <div style="font-size: 0.9rem; color: var(--color-text); line-height: 1.6; margin-bottom: 1.2rem; background: var(--color-bg); padding: 0.75rem; border-radius: 0.375rem;">
-                        <p style="margin: 0 0 0.3rem 0;"><strong>📍 Dirección:</strong> Vía a la Colina Km 3</p>
-                        <p style="margin: 0 0 0.3rem 0;"><strong>📞 Teléfono:</strong> (607) 645 9933</p>
-                        <p style="margin: 0 0 0.3rem 0;"><strong>⏰ Horarios:</strong> Miércoles a Lunes: 9:00 a.m. - 9:30 p.m.</p>
-                        <p style="margin: 0;"><strong>☕ Especialidad:</strong> Cappuccino cremoso y bebidas de autor.</p>
+                    <div class="sede-info-box">
+                        <p><strong>📍 Dirección:</strong> Vía a la Colina Km 3</p>
+                        <p><strong>📞 Teléfono:</strong> (607) 645 9933</p>
+                        <p><strong>⏰ Horarios:</strong> Miércoles a Lunes: 9:00 a.m. - 9:30 p.m.</p>
+                        <p><strong>☕ Especialidad:</strong> Cappuccino cremoso y bebidas de autor.</p>
                     </div>
 
-                    <a href="reservas.html" style="display: block; text-align: center; background-color: var(--color-primary); color: var(--color-white); padding: 0.6rem; border-radius: 0.3rem; text-decoration: none; font-weight: 600;">Reservar en esta sede</a>
+                    <a href="reservas.html" class="btn-card">Reservar en esta sede</a>
                 </article>
-
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 4rem; text-align: center; padding: 2rem 0; border-top: 0.0625rem solid rgba(92, 58, 33, 0.2);">
-        <p>&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <p class="footer__copy">&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

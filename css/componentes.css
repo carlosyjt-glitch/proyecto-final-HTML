@@ -1,69 +1,197 @@
 /* --- UNIDAD 04 y 05: Componentes y Estados (hover, focus, BEM) --- */
 
 /* Cabecera y Menú de navegación */
-header {
+header.header {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 2rem 0;
+    padding: 3rem 5%;
     margin-bottom: 2rem;
     border-bottom: 0.25rem solid var(--color-accent);
+    border-radius: 0 0 0.75rem 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
 }
 
-header h1, header p {
-    color: var(--color-white);
-    text-align: center;
+/* Distribución del logo y textos en la cabecera usando Grid */
+.header__grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-nav ul {
+/* Contenedor de los textos completamente centrado */
+.header__text-container {
+    display: grid;
+    align-content: center;
+    text-align: center; /* <-- Textos centrados al lado del logo */
+}
+
+/* Logo elegante y grande (10rem) */
+.header__logo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.3rem solid var(--color-accent);
+    box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5);
+    display: block;
+}
+
+/* Títulos con color amarillo institucional y fuente Georgia */
+.header__title {
+    font-family: Georgia, serif;
+    font-size: 3.8rem;
+    color: var(--color-accent);
+    margin: 0 0 0.4rem 0;
+    letter-spacing: 0.05rem;
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);
+}
+
+.header__subtitle {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.4rem;
+    color: var(--color-accent);
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.03rem;
+}
+
+/* Menú de navegación PRINCIPAL centrado usando Grid */
+.nav__list {
     list-style: none;
     padding: 0;
     margin: 1.5rem 0 0 0;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-nav a {
+.nav__link {
     color: var(--color-white);
     text-decoration: none;
     font-weight: 600;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 0.25rem;
+    font-size: 0.95rem;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Unidad 04.3: Estados hover y focus obligatorios con buen contraste */
-nav a:hover {
+/* Unidad 04.3: Estados hover y focus obligatorios */
+.nav__link:hover {
     background-color: var(--color-secondary);
     color: var(--color-accent);
 }
 
-nav a:focus {
+.nav__link:focus {
     outline: 0.1875rem solid var(--color-focus);
     outline-offset: 0.125rem;
 }
 
 /* Unidad 04.4: La página actual se distingue en el menú */
-nav a[aria-current="page"] {
+.nav__link[aria-current="page"] {
     background-color: var(--color-accent);
     color: var(--color-primary);
 }
 
-/* Botones y campos de formulario */
-button, input[type="submit"] {
+/* --- BANNER PRINCIPAL --- */
+.banner-principal {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner-principal__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- SECCIÓN DE INTRODUCCIÓN DE RESERVAS (CENTRADA) --- */
+.reservas-intro {
+    grid-column: 1 / -1;
+    background: var(--color-card-bg);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    border: 0.0625rem solid rgba(92, 58, 33, 0.15);
+    text-align: center;
+}
+
+.reservas-intro .section-title {
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.reservas-intro .section-desc {
+    max-width: 50rem;
+    margin: 0 auto;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* --- TARJETAS DE PRODUCTOS / FAVORITOS --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    grid-column: 1 / -1;
+}
+
+.product-card {
+    background: var(--color-card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid rgba(92, 58, 33, 0.15);
+}
+
+.product-card__img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.product-card__title {
+    font-family: Georgia, serif;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.product-card__desc {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.product-card__price {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 1rem;
+}
+
+/* --- BOTONES Y CAMPOS DE FORMULARIO --- */
+button, input[type="submit"], .btn-submit {
     background-color: var(--color-primary);
     color: var(--color-white);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 0.375rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    width: 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-button:hover, input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover, .btn-submit:hover {
     background-color: var(--color-secondary);
     color: var(--color-accent);
 }
@@ -74,47 +202,197 @@ button:focus, input:focus, select:focus, textarea:focus {
 }
 
 /* Formularios estructurados */
-fieldset {
-    border: 0.0625rem solid var(--color-accent);
-    border-radius: 0.375rem;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    background-color: var(--color-white);
+fieldset.reserva-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
-legend {
-    font-weight: bold;
-    color: var(--color-primary);
-    padding: 0 0.5rem;
-}
-
-form div {
+.form-group {
     margin-bottom: 1.25rem;
 }
 
-label {
+.form-label {
     display: block;
     font-weight: 500;
     margin-bottom: 0.375rem;
     color: var(--color-primary);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="time"],
-select,
-textarea {
+.form-input, .form-select, .form-textarea {
     width: 100%;
     padding: 0.75rem;
     border: 0.0625rem solid #ccc;
     border-radius: 0.375rem;
     font-family: inherit;
     font-size: 1rem;
+    background-color: var(--color-white);
 }
 
-/* Listas personalizadas */
+.form-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.radio-grid-group {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.radio-label, .checkbox-label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+}
+
+/* --- SECCIONES DE SEDES Y FIGURAS --- */
+.sede-figure {
+    margin: 0 0 1rem 0;
+}
+
+.sede-img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    display: block;
+}
+
+.sede-caption {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+.sede-info-box {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    background: var(--color-bg);
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
+}
+
+/* --- VIDEOS --- */
+.video-section {
+    grid-column: 1 / -1;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+    border: 0.125rem solid var(--color-accent);
+}
+
+.video-element {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- ÍNDICE DE LA CARTA CENTRADO --- */
+.carta-indice {
+    grid-column: 1 / -1;
+    background: var(--color-card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    border: 0.0625rem solid rgba(92, 58, 33, 0.15);
+    text-align: center;
+}
+
+.carta-indice__title {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.carta-indice__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.carta-indice__list a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.carta-indice__list a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* --- ESTILO PARA EL ASIDE DE RESERVAS EN TRES TARJETAS --- */
+.reservas-aside-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.reservas-aside-grid .card {
+    margin-bottom: 0;
+}
+
+.aside-title {
+    font-family: Georgia, serif;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--color-accent);
+    padding-bottom: 0.5rem;
+}
+
+.aside-list, .aside-ol {
+    padding-left: 1.2rem;
+    color: var(--color-text);
+}
+
+.aside-list li, .aside-ol li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Listas y Citas generales */
 main ul, main ol {
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
@@ -136,7 +414,6 @@ dd {
     margin-bottom: 0.5rem;
 }
 
-/* Cita (Blockquote) */
 blockquote {
     border-left: 0.25rem solid var(--color-accent);
     margin: 1.5rem 0;
@@ -156,21 +433,16 @@ blockquote footer {
     color: var(--color-secondary);
 }
 
-/* Figuras e imágenes flexibles */
-figure {
-    margin: 1.5rem 0;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.375rem;
-    display: block;
-}
-
-figcaption {
-    font-size: 0.875rem;
-    color: var(--color-text-light);
+/* Footer general */
+.footer {
+    grid-column: 1 / -1;
+    margin-top: 4rem;
     text-align: center;
-    margin-top: 0.5rem;
+    padding: 2rem 0;
+    border-top: 0.0625rem solid rgba(92, 58, 33, 0.2);
+}
+
+.footer__copy, .footer__info {
+    color: var(--color-text-light);
+    margin: 0.25rem 0;
 }

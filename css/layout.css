@@ -8,14 +8,26 @@ main {
     width: 100%;
 }
 
-/* Unidad 07.4: La cabecera y el pie ocupan todo el ancho de la grilla si están dentro de un contexto grid */
+/* Unidad 07.4: La cabecera y el pie ocupan todo el ancho de la grilla */
 header, footer {
     grid-column: 1 / -1;
 }
 
-/* Unidad 06.4: Uso de unidad de ventana (vh) para una sección de portada o héroe opcional */
+/* Asegurar que las secciones principales y galerías abarquen todo el ancho disponible del grid */
+.main-container > section, 
+.card-grid, 
+.sedes-section, 
+.video-section, 
+.table-section, 
+.reservas-intro, 
+.reservas-form-section, 
+.reservas-aside-grid {
+    grid-column: 1 / -1;
+}
+
+/* Unidad 06.4: Uso de unidad de ventana (vh) para la portada o héroe opcional */
 .hero-portada {
-    min-height: 50vh; /* Ocupa al menos la mitad de la altura de la ventana */
+    min-height: 50vh;
     display: grid;
     place-content: center;
     text-align: center;
@@ -27,21 +39,30 @@ header, footer {
     margin-bottom: 2rem;
 }
 
-/* Unidad 07.5: Galería o tarjetas de productos que se acomodan sola sin consultas (auto-fit y minmax) */
-.card-grid, .galeria-sedes {
+/* Unidad 07.5: Galería o tarjetas de productos/sedes que se acomodan solas con auto-fit y minmax */
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2rem;
-    grid-column: 1 / -1; /* Permite que la galería ocupe todo el ancho disponible */
+    grid-column: 1 / -1;
 }
 
-/* Unidad 07.4: Al menos un bloque ocupa dos columnas en pantallas grandes */
+/* --- ESTILO PARA EL ASIDE DE RESERVAS EN TRES COLUMNAS --- */
+.reservas-aside-grid {
+    grid-column: 1 / -1; /* Ocupa todo el ancho de la pantalla */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Distribuye las 3 tarjetas en horizontal */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Unidad 07.4: Bloque que destaca abarcando espacio */
 .bloque-destacado {
-    grid-column: span 1; /* Por defecto en móvil */
+    grid-column: span 1;
 }
 
 
-/* =================================================================atiende
+/* ===================================================================
    PUNTOS DE RUPTURA (MEDIA QUERIES) - Escritas de menor a mayor (Unidad 07.3)
    =================================================================== */
 
@@ -51,7 +72,6 @@ header, footer {
         grid-template-columns: repeat(2, 1fr); /* Unidad 07.3: Dos columnas desde 600px */
     }
 
-    /* Unidad 07.4: Un bloque específico ocupa 2 columnas */
     .bloque-destacado {
         grid-column: span 2;
     }
@@ -64,6 +84,6 @@ header, footer {
     }
 
     .bloque-destacado {
-        grid-column: span 2; /* Sigue destacando abarcando dos espacios */
+        grid-column: span 2;
     }
 }

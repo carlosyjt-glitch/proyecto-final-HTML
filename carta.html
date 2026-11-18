@@ -11,45 +11,45 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-    <!-- Encabezado Principal -->
-    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
-        <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
-            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
-            <div>
-                <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
-                    Nuestra Carta
-                </h1>
-                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                    Café Macondo
-                </p>
-                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                    Tradicion y Sabor Colombiano en Cada Taza
-                </p>
+    <header class="header">
+        <div class="header__grid">
+            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" class="header__logo">
+            <div class="header__text-container">
+                <h1 class="header__title">Nuestra Carta</h1>
+                <p class="header__subtitle">Café Macondo</p>
+                <p class="header__subtitle">Tradición y Sabor Colombiano en Cada Taza</p>
             </div>
         </div>
-        <nav aria-label="Menú principal">
-            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
-                <li><a href="index.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
-                <li><a href="carta.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
-                <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
-                <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+        <nav aria-label="Menú principal" class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="carta.html" aria-current="page" class="nav__link">Carta</a></li>
+                <li><a href="sedes.html" class="nav__link">Sedes</a></li>
+                <li><a href="reservas.html" class="nav__link">Reservas</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main-container">
+        <!-- ÍNDICE CON ANCLAS INTERNAS (Requerimiento RF-01.4) -->
+        <nav class="carta-indice" aria-label="Índice de la carta">
+            <h2 class="carta-indice__title">Salto rápido a secciones:</h2>
+            <ul class="carta-indice__list">
+                <li><a href="#video-arte">El Arte del Servicio</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#tabla-precios">Tabla de Precios</a></li>
+            </ul>
+        </nav>
+
         <!-- SECCIÓN DE VIDEO DEL SERVICIO -->
-        <section style="grid-column: 1 / -1; margin-bottom: 3rem; text-align: center;">
-            <h2 style="font-family: Georgia, serif; font-size: 2.2rem; color: var(--color-primary); margin-bottom: 0.5rem;">
-                El Arte de Servir en Café Macondo
-            </h2>
-            <p style="color: var(--color-text-light); margin-bottom: 2rem; max-width: 65ch; margin-left: auto; margin-right: auto;">
+        <section id="video-arte" class="video-section">
+            <h2 class="section-title">El Arte de Servir en Café Macondo</h2>
+            <p class="section-desc">
                 Vive la experiencia de nuestra magia artesanal en cada preparación, donde cada taza cuenta una historia única inspirada en el realismo mágico.
             </p>
 
-            <div style="max-width: 800px; margin: 0 auto; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2); border: 0.125rem solid var(--color-accent);">
-                <video controls width="100%" style="display: block; height: auto;" poster="imagenes/banner-macondo.jpg">
-                    <!-- Asegúrate de ubicar tu video descargado en la carpeta de videos o cambiar la ruta -->
+            <div class="video-container">
+                <video controls class="video-element" poster="imagenes/banner-macondo.jpg">
                     <source src="videos/servicio-cafe.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
@@ -57,37 +57,73 @@
         </section>
 
         <!-- SECCIÓN DE BEBIDAS Y PRODUCTOS -->
-        <section style="grid-column: 1 / -1;">
-            <h2 style="font-family: Georgia, serif; font-size: 2.2rem; color: var(--color-primary); margin-bottom: 0.5rem;">Nuestras Especialidades</h2>
-            <p style="color: var(--color-text-light); margin-bottom: 2rem;">Descubre la selección completa de cafés de origen y métodos de extracción artesanales.</p>
+        <section id="especialidades" class="menu-section">
+            <h2 class="section-title">Nuestras Especialidades</h2>
+            <p class="section-desc">Descubre la selección completa de cafés de origen y métodos de extracción artesanales.</p>
             
             <div class="card-grid">
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/cafe-espreso.jpg" alt="Taza de café espresso Macondo" style="width: 100%; height: 12rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Espresso Macondo</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Extracción concentrada con cuerpo sedoso, acidez brillante y notas a panela y chocolate negro.</p>
-                    <p style="font-weight: 600; color: var(--color-primary); margin-top: 1rem;">$ 5.500 COP</p>
+                <article class="product-card">
+                    <img src="imagenes/cafe-espreso.jpg" alt="Taza de café espresso Macondo" class="product-card__img">
+                    <h3 class="product-card__title">Espresso Macondo</h3>
+                    <p class="product-card__desc">Extracción concentrada con cuerpo sedoso, acidez brillante y notas a panela y chocolate negro.</p>
+                    <p class="product-card__price">$ 5.500 COP</p>
                 </article>
 
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/Filtrado-V60.jpg" alt="Método de filtrado artesanal V60" style="width: 100%; height: 12rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Filtrado V60</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Método de goteo manual que resalta la claridad aromática, con notas florales y frutas cítricas.</p>
-                    <p style="font-weight: 600; color: var(--color-primary); margin-top: 1rem;">$ 8.500 COP</p>
+                <article class="product-card">
+                    <img src="imagenes/Filtrado-V60.jpg" alt="Método de filtrado artesanal V60" class="product-card__img">
+                    <h3 class="product-card__title">Experiencia Filtrado V60</h3>
+                    <p class="product-card__desc">Método de goteo manual que resalta la claridad aromática, con notas florales y frutas cítricas.</p>
+                    <p class="product-card__price">$ 35.000 COP</p>
                 </article>
 
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/cafe-capuchino.jpg" alt="Cappuccino artesanal" style="width: 100%; height: 12rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Cappuccino Cremoso</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Espresso doble combinado con leche texturizada al punto exacto de microespuma aterciopelada.</p>
-                    <p style="font-weight: 600; color: var(--color-primary); margin-top: 1rem;">$ 7.500 COP</p>
+                <article class="product-card">
+                    <img src="imagenes/cafe-capuchino.jpg" alt="Cappuccino artesanal" class="product-card__img">
+                    <h3 class="product-card__title">Cappuccino Cremoso</h3>
+                    <p class="product-card__desc">Espresso doble combinado con leche texturizada al punto exacto de microespuma aterciopelada.</p>
+                    <p class="product-card__price">$ 7.500 COP</p>
                 </article>
+            </div>
+        </section>
+
+        <!-- TABLA DE PRECIOS SEMÁNTICA (Requerimiento RF-02.1) -->
+        <section id="tabla-precios" class="table-section">
+            <h2 class="section-title">Lista de Precios Oficial</h2>
+            <p class="section-desc">Consulta los valores detallados de nuestras bebidas y métodos de preparación.</p>
+            
+            <div class="table-container">
+                <table class="precio-table">
+                    <caption>Precios de cafés y especialidades - Café Macondo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto / Preparación</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col" class="text-right">Precio (COP)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Espresso Macondo</th>
+                            <td>Bebidas Calientes</td>
+                            <td class="text-right">$ 5.500</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Experiencia Filtrado V60</th>
+                            <td>Métodos Artesanales</td>
+                            <td class="text-right">$ 35.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cappuccino Cremoso</th>
+                            <td>Bebidas con Leche</td>
+                            <td class="text-right">$ 7.500</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 4rem; text-align: center; padding: 2rem 0; border-top: 0.0625rem solid rgba(92, 58, 33, 0.2);">
-        <p>&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <p class="footer__copy">&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

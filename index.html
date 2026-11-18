@@ -11,94 +11,89 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-    <header style="background: linear-gradient(135deg, #1a0f0a 0%, #3b2219 100%); padding: 3rem 5%; border-bottom: 0.25rem solid var(--color-accent); box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3); border-radius: 0 0 0.75rem 0.75rem; margin-bottom: 2rem;">
-        <div style="display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 3.5rem; margin-bottom: 2rem;">
-            <!-- Logo circular grande -->
-            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" style="width: 11rem; height: 11rem; border-radius: 50%; object-fit: cover; border: 0.3rem solid var(--color-accent); box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5); display: block;">
-            <div>
-                <h1 style="font-family: Georgia, serif; font-size: 4rem; color: var(--color-white); margin: 0 0 0.4rem 0; letter-spacing: 0.05rem; text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);">
-                    Café Macondo
-                </h1>
-                <p style="font-family: 'Segoe UI', sans-serif; font-size: 1.5rem; color: var(--color-accent); margin: 0; font-weight: 300; letter-spacing: 0.03rem;">
-                   Tradicion y Sabor Colombiano en Cada Taza
-                </p>
+    <header class="header">
+        <div class="header__grid">
+            <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" class="header__logo">
+            <div class="header__text-container">
+                <h1 class="header__title">Café Macondo</h1>
+                <p class="header__subtitle">Tradición y Sabor Colombiano en Cada Taza</p>
             </div>
         </div>
-        <nav aria-label="Menú principal">
-            <ul style="display: flex; justify-content: center; gap: 2rem; list-style: none; padding: 0; margin: 0;">
-                <li><a href="index.html" aria-current="page" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Inicio</a></li>
-                <li><a href="carta.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Carta</a></li>
-                <li><a href="sedes.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Sedes</a></li>
-                <li><a href="reservas.html" style="font-size: 0.95rem; padding: 0.4rem 0.9rem;">Reservas</a></li>
+        <nav aria-label="Menú principal" class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" aria-current="page" class="nav__link">Inicio</a></li>
+                <li><a href="carta.html" class="nav__link">Carta</a></li>
+                <li><a href="sedes.html" class="nav__link">Sedes</a></li>
+                <li><a href="reservas.html" class="nav__link">Reservas</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Banner principal de inicio abarcando todo el ancho -->
-        <section class="bloque-destacado" style="grid-column: 1 / -1; padding: 0; overflow: hidden; border-radius: 0.5rem; margin-bottom: 1rem;">
-            <img src="imagenes/banner-macondo.jpg" alt="Banner Café Macondo: El sabor de nuestras montañas en cada taza" style="width: 100%; height: auto; display: block;">
+    <main class="main-container">
+        <!-- Banner principal -->
+        <section class="banner-principal">
+            <img src="imagenes/banner-macondo.jpg" alt="Banner Café Macondo: El sabor de nuestras montañas en cada taza" class="banner-principal__img">
         </section>
 
-        <!-- SECCIÓN DE TRES TARJETAS PRINCIPALES DISTRIBUIDAS PERFECTAMENTE -->
-        
         <!-- Tarjeta 1: Nuestra Esencia -->
-        <article class="card" style="background: var(--color-card-bg); padding: 2.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-            <h2 style="font-family: Georgia, serif; font-size: 1.8rem; color: var(--color-primary); margin-top: 0; margin-bottom: 1rem;">Nuestra Esencia</h2>
-            <p style="color: var(--color-text); line-height: 1.6;">Café Macondo nace de la pasión por cultivar y servir los mejores granos de altura bajo la inspiración del realismo mágico colombiano. Cuidamos cada etapa del proceso, desde la recolección artesanal hasta la taza que disfrutas todos los días.</p>
+        <article class="card">
+            <h2 class="card__title">Nuestra Esencia</h2>
+            <p class="card__text">Café Macondo nace de la pasión por cultivar y servir los mejores granos de altura bajo la inspiración del realismo mágico colombiano. Cuidamos cada etapa del proceso, desde la recolección artesanal hasta la taza que disfrutas todos los días.</p>
         </article>
 
         <!-- Tarjeta 2: Testimonio de Clientes -->
-        <article class="card" style="background: var(--color-card-bg); padding: 2.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-            <h2 style="font-family: Georgia, serif; font-size: 1.8rem; color: var(--color-primary); margin-top: 0; margin-bottom: 1rem;">Lo que dicen nuestros clientes</h2>
-            <blockquote style="margin: 0; padding-left: 1.2rem; border-left: 0.25rem solid var(--color-accent); background: var(--color-bg); padding: 1rem; border-radius: 0.25rem;">
-                <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 0.75rem;">"El mejor espresso de especialidad que he probado en la ciudad. El ambiente y la calidez del lugar son incomparables."</p>
-                <footer style="font-size: 0.9rem; color: var(--color-primary); text-align: right; font-weight: 600;">— <cite>Sofía Martínez, Crítica Gastronómica</cite></footer>
+        <article class="card">
+            <h2 class="card__title">Lo que dicen nuestros clientes</h2>
+            <blockquote class="testimonial">
+                <p class="testimonial__text">"El mejor espresso de especialidad que he probado en la ciudad. El ambiente y la calidez del lugar son incomparables."</p>
+                <footer class="testimonial__footer">— <cite>Sofía Martínez, Crítica Gastronómica</cite></footer>
             </blockquote>
         </article>
 
-        <!-- Tarjeta 3: El Viaje del Grano (Nueva sección informativa) -->
-        <article class="card" style="background: var(--color-card-bg); padding: 2.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-            <h2 style="font-family: Georgia, serif; font-size: 1.8rem; color: var(--color-primary); margin-top: 0; margin-bottom: 1rem;">El Viaje del Grano</h2>
-            <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Cada grano de Café Macondo recorre un viaje mágico desde las montañas de altura. Cosechado a mano y procesado con esmero para preservar su carácter único y la trazabilidad completa.</p>
-            <ul style="padding-left: 1.2rem; color: var(--color-text); font-size: 0.95rem; line-height: 1.5; margin: 0;">
-                <li style="margin-bottom: 0.3rem;"><strong>Selección:</strong> Recolección manual de cerezas maduras.</li>
-                <li style="margin-bottom: 0.3rem;"><strong>Procesamiento:</strong> Lavado y secado artesanal al sol.</li>
+        <!-- Tarjeta 3: El Viaje del Grano -->
+        <article class="card">
+            <h2 class="card__title">El Viaje del Grano</h2>
+            <p class="card__text">Cada grano de Café Macondo recorre un viaje mágico desde las montañas de altura. Cosechado a mano y procesado con esmero para preservar su carácter único y la trazabilidad completa.</p>
+            <ul class="process-list">
+                <li><strong>Selección:</strong> Recolección manual de cerezas maduras.</li>
+                <li><strong>Procesamiento:</strong> Lavado y secado artesanal al sol.</li>
                 <li><strong>Tueste:</strong> Curvas de tueste medio para potenciar notas florales.</li>
             </ul>
         </article>
 
-        <!-- Galería de Favoritos de la Temporada (Ocupa todo el ancho) -->
-        <section style="grid-column: 1 / -1; margin-top: 2rem;">
-            <h2 style="font-family: Georgia, serif; font-size: 2.2rem; color: var(--color-primary); margin-bottom: 0.5rem;">Favoritos de la Temporada</h2>
-            <p style="color: var(--color-text-light); margin-bottom: 2rem;">Una muestra de nuestras preparaciones más queridas por quienes nos visitan a diario.</p>
+        <!-- Galería de Favoritos de la Temporada -->
+        <section class="season-favorites">
+            <h2 class="section-title">Favoritos de la Temporada</h2>
+            <p class="section-subtitle">Una muestra de nuestras preparaciones más queridas por quienes nos visitan a diario.</p>
             
             <div class="card-grid">
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/cafe-espreso.jpg" alt="Taza de café espresso Macondo" style="width: 100%; height: 12rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Espresso Macondo</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Extracción concentrada con cuerpo sedoso, acidez brillante y notas a panela y chocolate negro.</p>
-                    <p style="font-weight: 600; color: var(--color-primary); margin-top: 1rem;">$ 5.500 COP</p>
+                <article class="product-card">
+                    <img src="imagenes/cafe-espreso.jpg" alt="Taza de café espresso Macondo" class="product-card__img">
+                    <h3 class="product-card__title">Espresso Macondo</h3>
+                    <p class="product-card__desc">Extracción concentrada con cuerpo sedoso, acidez brillante y notas a panela y chocolate negro.</p>
+                    <p class="product-card__price">$ 5.500 COP</p>
                 </article>
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/Filtrado-V60.jpg" alt="Método de filtrado artesanal" style="width: 100%; height: 12rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Filtrado V60</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Método de goteo manual que resalta la claridad aromática, con notas florales y frutas cítricas.</p>
-                    <p style="font-weight: 600; color: var(--color-primary); margin-top: 1rem;">$ 8.500 COP</p>
+
+                <article class="product-card">
+                    <img src="imagenes/Filtrado-V60.jpg" alt="Método de filtrado artesanal" class="product-card__img">
+                    <h3 class="product-card__title">Experiencia Filtrado V60</h3>
+                    <p class="product-card__desc">Método de goteo manual que resalta la claridad aromática, con notas florales y frutas cítricas.</p>
+                    <p class="product-card__price">$ 35.000 COP</p>
                 </article>
-                <article class="card" style="background: var(--color-card-bg); padding: 1.5rem; border-radius: 0.5rem; border: 0.0625rem solid rgba(92, 58, 33, 0.15);">
-                    <img src="imagenes/cafe-capuchino.jpg" alt="Cappuccino artesanal" style="width: 100%; height: 12rem; object-fit: cover; border-radius: 0.375rem; margin-bottom: 1rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Cappuccino Cremoso</h3>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Espresso doble combinado con leche texturizada al punto exacto de microespuma aterciopelada.</p>
-                    <p style="font-weight: 600; color: var(--color-primary); margin-top: 1rem;">$ 7.500 COP</p>
+
+                <article class="product-card">
+                    <img src="imagenes/cafe-capuchino.jpg" alt="Cappuccino artesanal" class="product-card__img">
+                    <h3 class="product-card__title">Cappuccino Cremoso</h3>
+                    <p class="product-card__desc">Espresso doble combinado con leche texturizada al punto exacto de microespuma aterciopelada.</p>
+                    <p class="product-card__price">$ 7.500 COP</p>
                 </article>
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 4rem;">
-        <p>&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
-        <p>Conoce más sobre el café colombiano en <a href="https://www.federaciondecafeteros.org" target="_blank" rel="noopener noreferrer">FNC</a>[cite: 3].</p>
+    <footer class="footer">
+        <p class="footer__copy">&copy; 2026 Café Macondo. Todos los derechos reservados.</p>
+        <p class="footer__info">Conoce más sobre el café colombiano en <a href="https://www.federaciondecafeteros.org" target="_blank" rel="noopener noreferrer">FNC</a>.</p>
     </footer>
 </body>
 </html>
