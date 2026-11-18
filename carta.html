@@ -31,11 +31,7 @@
     </header>
 
     <main class="main-container">
-        <!-- INTRODUCCIÓN CENTRADA DE LA CARTA -->
-        <section class="section-intro">
-            <h2 class="section-title">El Arte de Servir en Café Macondo</h2>
-            <p>Vive la experiencia de nuestra magia artesanal en cada preparación, donde cada taza cuenta una historia única inspirada en el realismo mágico.</p>
-        </section>
+
 
         <!-- ÍNDICE DE NAVEGACIÓN RÁPIDA (Anclas internas centradas) -->
         <nav class="carta-indice" aria-label="Índice de la carta">
@@ -46,6 +42,20 @@
                 <li><a href="#precios">Tabla de Precios</a></li>
             </ul>
         </nav>
+
+        <!-- INTRODUCCIÓN Y VIDEO PROMOCIONAL CENTRADO -->
+        <section class="video-section">
+            <h2 class="section-title">El Arte de Servir en Café Macondo</h2>
+            <p class="section-desc">Vive la experiencia de nuestra magia artesanal en cada preparación, donde cada taza cuenta una historia única inspirada en el realismo mágico.</p>
+            
+            <div class="video-container">
+                <video controls class="video-element" poster="imagenes/banner-macondo.jpg">
+                    <source src="videos/experiencia-cafe.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
+        </section>
+
 
         <!-- SECCIÓN 1: EL ARTE DEL SERVICIO -->
         <section id="servicio" class="product-card">
@@ -63,7 +73,7 @@
         <!-- SECCIÓN 2: ESPECIALIDADES (Tarjetas en Grid) -->
         <section id="especialidades" class="card-grid">
             <article class="product-card">
-                <img src="imagenes/cafe-expreso.jpg" alt="Expreso Macondo" class="product-card__img">
+                <img src="imagenes/Expreso-Doble-Aureliano.jpg" alt="Expreso Macondo" class="product-card__img">
                 <h3 class="product-card__title">Expreso Doble Aureliano</h3>
                 <p class="product-card__desc">Intenso, con cuerpo denso y notas a chocolate oscuro y frutos rojos silvestres.</p>
                 <p class="product-card__price">$ 8.500 COP</p>
@@ -77,17 +87,17 @@
             </article>
 
             <article class="product-card">
-                <img src="imagenes/postre-macondo.jpg" alt="Repostería artesanal" class="product-card__img">
+                <img src="imagenes/Almojábana-Tradicional.jpg" alt="Repostería artesanal" class="product-card__img">
                 <h3 class="product-card__title">Almojábana Tradicional</h3>
                 <p class="product-card__desc">Horneada al momento, elaborada con auténtico queso campesino y maíz fresco.</p>
                 <p class="product-card__price">$ 6.000 COP</p>
             </article>
         </section>
 
-        <!-- SECCIÓN 3: TABLA DE PRECIOS -->
+        <!-- SECCIÓN 3: TABLA DE PRECIOS COMPLETA -->
         <section id="precios" class="product-card" style="grid-column: 1 / -1;">
             <h3 class="product-card__title">Tabla de Precios y Preparaciones</h3>
-            <p class="product-card__desc">Consulte el valor de nuestras bebidas y acompañamientos artesanales.</p>
+            <p class="product-card__desc">Consulte el valor consolidado de todas nuestras bebidas, especialidades y acompañamientos artesanales.</p>
             
             <div class="table-container" style="overflow-x: auto;">
                 <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
@@ -99,17 +109,34 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Productos de las tarjetas superiores -->
                         <tr style="border-bottom: 0.0625rem solid #ddd;">
+                            <td style="padding: 0.75rem; font-weight: 600;">Expreso Doble Aureliano</td>
+                            <td style="padding: 0.75rem;">Intenso, cuerpo denso y frutos rojos</td>
+                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 8.500</td>
+                        </tr>
+                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
+                            <td style="padding: 0.75rem; font-weight: 600;">Capuchino Remedios</td>
+                            <td style="padding: 0.75rem;">Espuma terciopelada y cacao fino</td>
+                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 10.200</td>
+                        </tr>
+                        <tr style="border-bottom: 0.0625rem solid #ddd;">
+                            <td style="padding: 0.75rem; font-weight: 600;">Almojábana Tradicional</td>
+                            <td style="padding: 0.75rem;">Queso campesino y maíz fresco</td>
+                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 6.000</td>
+                        </tr>
+                        <!-- Bebidas adicionales de la tabla anterior -->
+                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
                             <td style="padding: 0.75rem;">Café de Origen (Taza)</td>
                             <td style="padding: 0.75rem;">Sierra Nevada (Suave)</td>
                             <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 6.500</td>
                         </tr>
-                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
+                        <tr style="border-bottom: 0.0625rem solid #ddd;">
                             <td style="padding: 0.75rem;">Latte Macondo</td>
                             <td style="padding: 0.75rem;">Espuma cremosa y toque de vainilla</td>
                             <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 9.800</td>
                         </tr>
-                        <tr style="border-bottom: 0.0625rem solid #ddd;">
+                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
                             <td style="padding: 0.75rem;">Chocolate Artesanal</td>
                             <td style="padding: 0.75rem;">Cacao de San Vicente con clavos y canela</td>
                             <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 8.000</td>

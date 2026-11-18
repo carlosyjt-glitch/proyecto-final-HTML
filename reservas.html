@@ -15,7 +15,7 @@
         <div class="header__grid">
             <img src="imagenes/logo-macondo.jpg" alt="Logo Café Macondo" class="header__logo">
             <div class="header__text-container">
-                <h1 class="header__title">Reserva tu Mesa</h1>
+                <h1 class="header__title">Reservas</h1>
                 <p class="header__subtitle">Café Macondo</p>
                 <p class="header__subtitle">Tradición y Sabor Colombiano en Cada Taza</p>
             </div>
@@ -31,113 +31,125 @@
     </header>
 
     <main class="main-container">
-        <!-- Título principal de la sección -->
-        <section class="reservas-intro">
+        <!-- INTRODUCCIÓN Y VIDEO PROMOCIONAL CENTRADO -->
+        <section class="video-section">
             <h2 class="section-title">Reserva Tu Mesa en Café Macondo</h2>
             <p class="section-desc">Aparta tu espacio con anticipación para disfrutar de tus preparaciones favoritas sin esperas. Ideal para encuentros de trabajo, celebraciones íntimas o simplemente garantizar tu rincón favorito de lectura.</p>
+            
+            <div class="video-container" style="margin-top: 1.5rem;">
+                <video controls class="video-element" poster="imagenes/banner-macondo.jpg">
+                    <source src="videos/reserva-mesa.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
         </section>
 
-        <!-- COLUMNA IZQUIERDA: El Formulario -->
-        <section class="reservas-form-section">
-            <h3 class="form-section-title">1. Información de Contacto y Reserva</h3>
+        <!-- SECCIÓN DEL FORMULARIO DE RESERVA -->
+        <section class="reservas-form-section product-card" style="grid-column: 1 / -1;">
+            <h3 class="product-card__title">Formulario de Solicitud de Reserva</h3>
+            <p class="product-card__desc">Complete los datos requeridos para gestionar su espacio en nuestra sede de preferencia.</p>
 
-            <form action="#" method="post" class="reserva-form">
+            <form action="#" method="POST">
                 <fieldset class="reserva-fieldset">
-                    <legend class="sr-only">Formulario de reserva de mesa</legend>
-                    
-                    <div class="form-group">
-                        <label for="nombre" class="form-label">Nombre completo y apellidos:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Camila Morales Restrepo" required class="form-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="correo" class="form-label">Correo electrónico de confirmación:</label>
-                        <input type="email" id="correo" name="correo" placeholder="camila.morales@ejemplo.com" required class="form-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefono" class="form-label">Número telefónico de contacto:</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+57 310 987 6543" required class="form-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="sede" class="form-label">Seleccione la sede:</label>
-                        <select id="sede" name="sede" required class="form-select">
-                            <option value="">-- Elige una sede --</option>
-                            <option value="centro">Sede Centro Histórico (Casa de los Buendía)</option>
-                            <option value="norte">Sede Parque Norte (Plenilunio de Mariposas)</option>
-                            <option value="mirador">Sede Mirador Alto</option>
-                        </select>
+                    <div class="form-row-grid">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" class="form-input" required placeholder="Ej. Aureliano Buendía">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="correo@ejemplo.com">
+                        </div>
                     </div>
 
                     <div class="form-row-grid">
                         <div class="form-group">
-                            <label for="fecha" class="form-label">Fecha de reserva:</label>
-                            <input type="date" id="fecha" name="fecha" required class="form-input">
+                            <label for="telefono" class="form-label">Teléfono de contacto:</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-input" required placeholder="Ej. 3001234567">
                         </div>
                         <div class="form-group">
-                            <label for="hora" class="form-label">Hora estimada:</label>
-                            <input type="time" id="hora" name="hora" required class="form-input">
+                            <label for="personas" class="form-label">Número de personas:</label>
+                            <select id="personas" name="personas" class="form-select" required>
+                                <option value="" disabled selected>Seleccione cantidad</option>
+                                <option value="1">1 persona (Rincón de lectura)</option>
+                                <option value="2">2 personas (Mesa íntima)</option>
+                                <option value="4">4 personas (Reunión / Familiar)</option>
+                                <option value="mas">Más de 4 personas (Grupo)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row-grid">
+                        <div class="form-group">
+                            <label for="fecha" class="form-label">Fecha de la reserva:</label>
+                            <input type="date" id="fecha" name="fecha" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora" class="form-label">Hora preferida:</label>
+                            <input type="time" id="hora" name="hora" class="form-input" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <span class="form-label">Tipo de ocasión:</span>
+                        <label class="form-label">Seleccione la sede de interés:</label>
                         <div class="radio-grid-group">
-                            <label class="radio-label"><input type="radio" name="ocasion" value="casual" checked> Casual</label>
-                            <label class="radio-label"><input type="radio" name="ocasion" value="trabajo"> Trabajo / Reunión</label>
-                            <label class="radio-label"><input type="radio" name="ocasion" value="celebracion"> Celebración</label>
+                            <label class="radio-label">
+                                <input type="radio" name="sede" value="centro" required> Sede Histórica (Centro)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="sede" value="parque"> Sede del Parque
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="sede" value="mirador"> Sede Mirador de las Mariposas
+                            </label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="comentarios" class="form-label">Comentarios o solicitudes especiales:</label>
-                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="¿Alguna alergia o requerimiento especial?" class="form-textarea"></textarea>
-                    </div>
-
-                    <div class="form-group-checkbox">
                         <label class="checkbox-label">
-                            <input type="checkbox" name="terminos" required> Acepto las políticas de reserva y privacidad del establecimiento.
+                            <input type="checkbox" name="terminos" required> Acepto las políticas de reserva y tiempo de tolerancia (15 minutos).
                         </label>
                     </div>
-                </fieldset>
 
-                <button type="submit" class="btn-submit">Confirmar Reserva</button>
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <button type="submit" class="btn-submit">Confirmar Solicitud de Reserva</button>
+                    </div>
+                </fieldset>
             </form>
         </section>
 
-   <!-- COLUMNA DERECHA: Dividida en 3 tarjetas ordenadas -->
-<aside class="reservas-aside-grid">
-    <article class="card">
-        <h3 class="aside-title">Beneficios de Reservar</h3>
-        <ul class="aside-list">
-            <li><strong>Atención preferencial:</strong> Tu mesa estará lista al llegar sin filas ni esperas.</li>
-            <li><strong>Rincón garantizado:</strong> Ideal para lectura, trabajo o reuniones privadas.</li>
-            <li><strong>Obsequio de bienvenida:</strong> Degustación de nuestro café de origen del día.</li>
-        </ul>
-    </article>
+        <!-- SECCIÓN INFERIOR DE 3 TARJETAS (Beneficios, Glosario, Pasos) -->
+        <aside class="reservas-aside-grid">
+            <article class="product-card">
+                <h3 class="aside-title">Beneficios de Reservar</h3>
+                <ul class="aside-list">
+                    <li><strong>Atención preferencial:</strong> Tu mesa estará lista al llegar sin filas ni esperas.</li>
+                    <li><strong>Rincón garantizado:</strong> Ideal para lectura, trabajo o reuniones privadas.</li>
+                    <li><strong>Obsequio de bienvenida:</strong> Degustación de nuestro café de origen del día.</li>
+                </ul>
+            </article>
 
-    <article class="card">
-        <h3 class="aside-title">Glosario de Términos (Políticas)</h3>
-        <dl class="aside-dl">
-            <dt><strong>Tolerancia:</strong></dt>
-            <dd>Tiempo máximo de espera guardando la mesa reservada (15 minutos).</dd>
-            <dt><strong>Cancelación:</strong></dt>
-            <dd>Anulación de la reserva sin penalización económica.</dd>
-            <dt><strong>Reagendamiento:</strong></dt>
-            <dd>Modificación de fecha u hora sujeta a disponibilidad de aforo.</dd>
-        </dl>
-    </article>
+            <article class="product-card">
+                <h3 class="aside-title">Glosario de Términos (Políticas)</h3>
+                <dl>
+                    <dt>Tolerancia:</dt>
+                    <dd>Tiempo máximo de espera guardando la mesa reservada (15 minutos).</dd>
+                    <dt>Cancelación:</dt>
+                    <dd>Anulación de la reserva sin penalización económica previa.</dd>
+                    <dt>Reagendamiento:</dt>
+                    <dd>Modificación de fecha u hora sujeta a disponibilidad de aforo.</dd>
+                </dl>
+            </article>
 
-    <article class="card">
-        <h3 class="aside-title">Pasos de Confirmación</h3>
-        <ol class="aside-ol">
-            <li>Completas el formulario con tus datos y preferencias.</li>
-            <li>Recibes una notificación automática en tu correo electrónico.</li>
-            <li>Te esperamos en la sede seleccionada.</li>
-        </ol>
-    </article>
-</aside>
+            <article class="product-card">
+                <h3 class="aside-title">Pasos de Confirmación</h3>
+                <ol class="aside-ol">
+                    <li>Completas el formulario con tus datos y preferencias.</li>
+                    <li>Recibes una notificación automática en tu correo electrónico.</li>
+                    <li>Te esperamos en la sede seleccionada a la hora acordada.</li>
+                </ol>
+            </article>
+        </aside>
     </main>
 
     <footer class="footer">

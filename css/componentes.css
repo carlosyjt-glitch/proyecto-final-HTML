@@ -114,27 +114,28 @@ header.header {
 .video-section, 
 .reservas-intro {
     grid-column: 1 / -1;
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 2rem;
 }
 
 .section-intro h2,
 .section-intro .section-title {
-    text-align: center;
+    text-align: center !important;
     font-family: Georgia, serif;
     font-size: 2.2rem;
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
+/* Forzar centrado absoluto en todos los párrafos de introducción */
 .section-intro p,
 .video-section p,
 .video-section .section-desc,
 .reservas-intro .section-desc {
-    text-align: center; /* <-- Fuerza el centrado absoluto del párrafo */
+    text-align: center !important;
     max-width: 45rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -444,4 +445,29 @@ blockquote footer {
 .footer__copy, .footer__info {
     color: var(--color-text-light);
     margin: 0.25rem 0;
+}
+
+/* --- CENTRADO PERFECTO PARA SECCIONES DE VIDEO E INTRODUCCIONES --- */
+.video-section {
+    grid-column: 1 / -1;
+    text-align: center !important;
+    margin-bottom: 3rem;
+}
+
+.video-section .section-title,
+.video-section h2 {
+    text-align: center !important;
+    font-family: Georgia, serif;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.video-section .section-desc,
+.video-section p {
+    text-align: center !important;
+    max-width: 45rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: var(--color-text-light);
+    line-height: 1.6;
 }
