@@ -1,17 +1,17 @@
 # Proyecto Final — Sitio Web Adaptable: Café Macondo
 
-* **Estudiante:** Carlos Yovanny Jaimes
-* **Proyecto:** Sitio web multipágina para la cafetería de especialidad Café Macondo.
-* **Tecnologías utilizadas:** HTML5 semántico y CSS3 (Grid Layout, Variables, Unidades Relativas). Sin frameworks ni JavaScript.
+- **Estudiante:** Carlos Yovanny Jaimes
+- **Proyecto:** Sitio web multipágina para la cafetería de especialidad Café Macondo.
+- **Tecnologías utilizadas:** HTML5 semántico y CSS3 (Grid Layout, Variables, Unidades Relativas). Sin frameworks ni JavaScript.
 
 ---
 
 ## 1. Mapa del Sitio
-El sitio consta de cuatro páginas interconectadas mediante un menú de navegación unificado, tematizadas bajo la estética del realismo mágico colombiano:
-* **`index.html` (Inicio):** Presenta el banner principal con la identidad visual de la marca, la propuesta de valor inspirada en la tradición cafetera, una sección de testimonios (con `blockquote`) y un enlace externo seguro hacia la Federación Nacional de Cafeteros.
-* **`carta.html` (Carta):** Contiene un índice con anclas internas para navegar rápidamente entre secciones, tablas detalladas de precios con `thead`, `tbody`, `th` con `scope` y filas alternas con `:nth-child()`, además de listas de filtrados y acompañamientos (`dl`).
-* **`sedes.html` (Sedes):** Muestra las tres ubicaciones de la cafetería utilizando elementos estructurados con `figure` y `figcaption` explicativos.
-* **`reservas.html` (Reservas):** Incluye un formulario completo con `fieldset`, `legend`, campos de selección (`select`), grupos de opción (`radio`), casillas de verificación (`checkbox`), área de texto y validaciones nativas (`required`, `placeholder`).
+El sitio consta de cuatro páginas interconectadas mediante un menú de navegación unificado y centrado, tematizadas bajo la estética del realismo mágico colombiano:
+- **`index.html` (Inicio):** Presenta el banner principal con la identidad visual de la marca, la propuesta de valor inspirada en la tradición cafetera, una sección de testimonios (con `blockquote`) y un enlace externo seguro hacia la Federación Nacional de Cafeteros.
+- **`carta.html` (Carta):** Contiene un índice con anclas internas para navegar rápidamente entre secciones, tablas detalladas de precios con `thead`, `tbody`, `th` con `scope` y filas alternas con `:nth-child()`, además de listas de filtrados y acompañamientos (`dl`).
+- **`sedes.html` (Sedes):** Muestra las tres ubicaciones de la cafetería utilizando elementos estructurados con `figure` y `figcaption` explicativos.
+- **`reservas.html` (Reservas):** Incluye un formulario completo con `fieldset`, campos de selección (`select`), grupos de opción (`radio`), casillas de verificación (`checkbox`), área de texto y validaciones nativas. Además, cuenta con una sección inferior estructurada en tres tarjetas dinámicas que detallan los beneficios, el glosario de políticas y los pasos de confirmación.
 
 ---
 
@@ -26,23 +26,25 @@ El sitio consta de cuatro páginas interconectadas mediante un menú de navegaci
 
 ---
 
-## 3. Justificación de Cinco Unidades (RF-06.5)
+## 3. Justificación de Unidades (RF-06.5)
 1. **`font-size: 100%` (en el elemento `html`):** Se utilizó esta unidad porcentual como base para garantizar la accesibilidad y respetar las preferencias de zoom del navegador del usuario.
-2. **`rem` (en tamaños de letra como `font-size: 2.5rem` y espacios generales):** Elegido porque es una unidad relativa al tamaño raíz, lo que mantiene una escala tipográfica y de espaciado perfectamente proporcional y predecible en todo el sitio.
+2. **`rem` (en tamaños de letra y espaciados generales):** Elegido porque es una unidad relativa al tamaño raíz, lo que mantiene una escala tipográfica y de espaciado perfectamente proporcional y predecible en todo el sitio.
 3. **`ch` (en el ancho de párrafos `max-width: 65ch`):** Se usó para limitar la longitud de las líneas de texto según la medida ideal de caracteres por línea, garantizando una lectura sumamente cómoda para la vista humana.
 4. **`%` (en anchos como `width: 100%` y grillas flexibles):** Utilizado para asegurar que contenedores e imágenes se adapten de forma fluida al 100% del espacio disponible de su contenedor padre sin desbordarse.
 5. **`vh` (en la altura mínima de secciones hero `min-height: 50vh`):** Seleccionado para tomar una proporción exacta de la altura visible de la ventana del dispositivo y dar presencia visual a los encabezados de portada.
-6. **`px` (exclusivamente en bordes finos `border: 0.0625rem solid ...` / `1px` equivalente):** Se reservó de forma estricta únicamente para líneas divisorias y bordes pequeños donde una unidad mayor perdería nitidez visual.
+6. **`px` / `rem` equivalente (en bordes finos):** Se reservó de forma estricta únicamente para líneas divisorias y bordes pequeños donde una unidad mayor perdería nitidez visual.
 
 ---
 
 ## 4. Decisiones de Diseño y Conceptualización
-* **Identidad de Marca:** Se renombró el proyecto a **Café Macondo**, integrando una propuesta visual basada en el realismo mágico colombiano. Se incorporaron el logotipo circular corporativo y un banner principal adaptativo en la portada, acompañados de una imagen de fondo translúcida de mariposas amarillas que enriquece la estética literaria del sitio.
-* **Enfoque Móvil Primero (Mobile First):** Se estructuró el código CSS base pensando en los teléfonos celulares (una sola columna vertical) y se fueron agregando complejidades mediante consultas de medios (`@media (min-width: ...)`) de menor a mayor (`600px` y `900px`). Esto garantiza un rendimiento óptimo y un diseño sólido en pantallas pequeñas.
-* **Puntos de ruptura elegidos:** Se establecieron en `37.5rem` (600px) para dar el salto a dos columnas en tabletas, y `56.25rem` (900px) para alcanzar las tres columnas en computadores de escritorio, optimizando el espacio visual de manera fluida.
+- **Identidad de Marca:** Se estructuró el proyecto bajo la marca **Café Macondo**, integrando una propuesta visual basada en el realismo mágico colombiano. Se incorporó un logotipo circular corporativo de gran formato con alineación vertical centrada frente a los títulos institucionales en tipografía Georgia de alta elegancia.
+- **Enfoque Móvil Primero (Mobile First):** Se diseñó la estructura CSS base pensando en los teléfonos celulares (una sola columna vertical) y se fueron incorporando complejidades mediante consultas de medios (`@media (min-width: ...)`) de menor a mayor (`600px` y `900px`). Esto garantiza un rendimiento óptimo y un diseño sólido en pantallas pequeñas.
+- **Puntos de ruptura elegidos:** Se establecieron en `37.5rem` (600px) para dar el salto a dos columnas en tabletas, y `56.25rem` (900px) para alcanzar las tres columnas en computadores de escritorio, optimizando el espacio visual de manera fluida y sin recurrir jamás a Flexbox ni frameworks externos.
 
 ---
 
 ## 5. Dificultades y Resolución
-* **Dificultad:** Inicialmente, las tablas de precios de la carta causaban un leve desbordamiento horizontal en la prueba a 500px debido al ancho fijo de las celdas en pantallas muy reducidas.
-* **Resolución:** Se solucionó envolviendo la etiqueta `table` dentro de un contenedor dedicado (`.table-container`) con la propiedad CSS `overflow-x: auto`, permitiendo que la tabla se desplace de manera interna y totalmente fluida en dispositivos móviles sin romper el diseño general de la página.
+- **Dificultad 1:** Inicialmente, las tablas de precios de la carta causaban un leve desbordamiento horizontal en la prueba a 500px debido al ancho fijo de las celdas en pantallas muy reducidas.
+  - *Resolución:* Se solucionó envolviendo la etiqueta `table` dentro de un contenedor dedicado (`.table-container`) con la propiedad CSS `overflow-x: auto`, permitiendo un desplazamiento interno fluido sin romper el diseño de la página.
+- **Dificultad 2:** La distribución inicial de los bloques informativos inferiores en la página de reservas se apilaba verticalmente en una sola columna estrecha en pantallas grandes.
+  - *Resolución:* Se reestructuró el componente utilizando la clase `.card` y un contenedor Grid adaptable con `repeat(auto-fit, minmax(18rem, 1fr))`, logrando que se desplieguen armónicamente en tres columnas horizontales en computadores de escritorio.

@@ -24,7 +24,7 @@ header.header {
 .header__text-container {
     display: grid;
     align-content: center;
-    text-align: center; /* <-- Textos centrados al lado del logo */
+    text-align: center;
 }
 
 /* Logo elegante y grande (10rem) */
@@ -109,27 +109,32 @@ header.header {
     display: block;
 }
 
-/* --- SECCIÓN DE INTRODUCCIÓN DE RESERVAS (CENTRADA) --- */
+/* --- CLASE GLOBAL PARA CENTRAR SECCIONES E INTRODUCCIONES --- */
+.section-intro, 
+.video-section, 
 .reservas-intro {
     grid-column: 1 / -1;
-    background: var(--color-card-bg);
-    padding: 2.5rem;
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
-    border: 0.0625rem solid rgba(92, 58, 33, 0.15);
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.reservas-intro .section-title {
+.section-intro h2,
+.section-intro .section-title {
+    text-align: center;
     font-family: Georgia, serif;
     font-size: 2.2rem;
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
+.section-intro p,
+.video-section p,
+.video-section .section-desc,
 .reservas-intro .section-desc {
-    max-width: 50rem;
-    margin: 0 auto;
+    text-align: center; /* <-- Fuerza el centrado absoluto del párrafo */
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -300,12 +305,6 @@ fieldset.reserva-fieldset {
 }
 
 /* --- VIDEOS --- */
-.video-section {
-    grid-column: 1 / -1;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
 .video-container {
     max-width: 50rem;
     margin: 0 auto;

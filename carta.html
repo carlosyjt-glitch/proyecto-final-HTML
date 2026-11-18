@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Macondo — Carta</title>
+    <title>Café Macondo — Nuestra Carta</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/tipografia.css">
     <link rel="stylesheet" href="css/cajas.css">
@@ -31,90 +31,88 @@
     </header>
 
     <main class="main-container">
-        <!-- ÍNDICE CON ANCLAS INTERNAS (Requerimiento RF-01.4) -->
+        <!-- INTRODUCCIÓN CENTRADA DE LA CARTA -->
+        <section class="section-intro">
+            <h2 class="section-title">El Arte de Servir en Café Macondo</h2>
+            <p>Vive la experiencia de nuestra magia artesanal en cada preparación, donde cada taza cuenta una historia única inspirada en el realismo mágico.</p>
+        </section>
+
+        <!-- ÍNDICE DE NAVEGACIÓN RÁPIDA (Anclas internas centradas) -->
         <nav class="carta-indice" aria-label="Índice de la carta">
-            <h2 class="carta-indice__title">Salto rápido a secciones:</h2>
+            <h3 class="carta-indice__title">Salto rápido a secciones:</h3>
             <ul class="carta-indice__list">
-                <li><a href="#video-arte">El Arte del Servicio</a></li>
+                <li><a href="#servicio">El Arte del Servicio</a></li>
                 <li><a href="#especialidades">Especialidades</a></li>
-                <li><a href="#tabla-precios">Tabla de Precios</a></li>
+                <li><a href="#precios">Tabla de Precios</a></li>
             </ul>
         </nav>
 
-        <!-- SECCIÓN DE VIDEO DEL SERVICIO -->
-        <section id="video-arte" class="video-section">
-            <h2 class="section-title">El Arte de Servir en Café Macondo</h2>
-            <p class="section-desc">
-                Vive la experiencia de nuestra magia artesanal en cada preparación, donde cada taza cuenta una historia única inspirada en el realismo mágico.
-            </p>
-
-            <div class="video-container">
-                <video controls class="video-element" poster="imagenes/banner-macondo.jpg">
-                    <source src="videos/servicio-cafe.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
-            </div>
+        <!-- SECCIÓN 1: EL ARTE DEL SERVICIO -->
+        <section id="servicio" class="product-card">
+            <h3 class="product-card__title">El Arte del Servicio</h3>
+            <p class="product-card__desc">Cada grano es seleccionado minuciosamente de cultivos de origen colombiano, garantizando una taza llena de notas aromáticas inigualables y un proceso tostado artesanal.</p>
+            
+            <dl>
+                <dt>Método Tradicional:</dt>
+                <dd>Extracción en cafetera de émbolo o filtro de tela para rescatar los aceites esenciales del café.</dd>
+                <dt>Método de Autor:</dt>
+                <dd>Infusiones en frío (Cold Brew) con notas cítricas y panela orgánica.</dd>
+            </dl>
         </section>
 
-        <!-- SECCIÓN DE BEBIDAS Y PRODUCTOS -->
-        <section id="especialidades" class="menu-section">
-            <h2 class="section-title">Nuestras Especialidades</h2>
-            <p class="section-desc">Descubre la selección completa de cafés de origen y métodos de extracción artesanales.</p>
-            
-            <div class="card-grid">
-                <article class="product-card">
-                    <img src="imagenes/cafe-espreso.jpg" alt="Taza de café espresso Macondo" class="product-card__img">
-                    <h3 class="product-card__title">Espresso Macondo</h3>
-                    <p class="product-card__desc">Extracción concentrada con cuerpo sedoso, acidez brillante y notas a panela y chocolate negro.</p>
-                    <p class="product-card__price">$ 5.500 COP</p>
-                </article>
+        <!-- SECCIÓN 2: ESPECIALIDADES (Tarjetas en Grid) -->
+        <section id="especialidades" class="card-grid">
+            <article class="product-card">
+                <img src="imagenes/cafe-expreso.jpg" alt="Expreso Macondo" class="product-card__img">
+                <h3 class="product-card__title">Expreso Doble Aureliano</h3>
+                <p class="product-card__desc">Intenso, con cuerpo denso y notas a chocolate oscuro y frutos rojos silvestres.</p>
+                <p class="product-card__price">$ 8.500 COP</p>
+            </article>
 
-                <article class="product-card">
-                    <img src="imagenes/Filtrado-V60.jpg" alt="Método de filtrado artesanal V60" class="product-card__img">
-                    <h3 class="product-card__title">Experiencia Filtrado V60</h3>
-                    <p class="product-card__desc">Método de goteo manual que resalta la claridad aromática, con notas florales y frutas cítricas.</p>
-                    <p class="product-card__price">$ 35.000 COP</p>
-                </article>
+            <article class="product-card">
+                <img src="imagenes/cafe-capuchino.jpg" alt="Capuchino Remedios" class="product-card__img">
+                <h3 class="product-card__title">Capuchino Remedios</h3>
+                <p class="product-card__desc">Espuma de leche terciopelada coronada con cacao fino de aroma y arte latte.</p>
+                <p class="product-card__price">$ 10.200 COP</p>
+            </article>
 
-                <article class="product-card">
-                    <img src="imagenes/cafe-capuchino.jpg" alt="Cappuccino artesanal" class="product-card__img">
-                    <h3 class="product-card__title">Cappuccino Cremoso</h3>
-                    <p class="product-card__desc">Espresso doble combinado con leche texturizada al punto exacto de microespuma aterciopelada.</p>
-                    <p class="product-card__price">$ 7.500 COP</p>
-                </article>
-            </div>
+            <article class="product-card">
+                <img src="imagenes/postre-macondo.jpg" alt="Repostería artesanal" class="product-card__img">
+                <h3 class="product-card__title">Almojábana Tradicional</h3>
+                <p class="product-card__desc">Horneada al momento, elaborada con auténtico queso campesino y maíz fresco.</p>
+                <p class="product-card__price">$ 6.000 COP</p>
+            </article>
         </section>
 
-        <!-- TABLA DE PRECIOS SEMÁNTICA (Requerimiento RF-02.1) -->
-        <section id="tabla-precios" class="table-section">
-            <h2 class="section-title">Lista de Precios Oficial</h2>
-            <p class="section-desc">Consulta los valores detallados de nuestras bebidas y métodos de preparación.</p>
+        <!-- SECCIÓN 3: TABLA DE PRECIOS -->
+        <section id="precios" class="product-card" style="grid-column: 1 / -1;">
+            <h3 class="product-card__title">Tabla de Precios y Preparaciones</h3>
+            <p class="product-card__desc">Consulte el valor de nuestras bebidas y acompañamientos artesanales.</p>
             
-            <div class="table-container">
-                <table class="precio-table">
-                    <caption>Precios de cafés y especialidades - Café Macondo</caption>
+            <div class="table-container" style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
                     <thead>
-                        <tr>
-                            <th scope="col">Producto / Preparación</th>
-                            <th scope="col">Categoría</th>
-                            <th scope="col" class="text-right">Precio (COP)</th>
+                        <tr style="background-color: var(--color-primary); color: var(--color-white);">
+                            <th scope="col" style="padding: 0.75rem; text-align: left;">Preparación</th>
+                            <th scope="col" style="padding: 0.75rem; text-align: left;">Origen / Detalle</th>
+                            <th scope="col" style="padding: 0.75rem; text-align: right;">Valor (COP)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">Espresso Macondo</th>
-                            <td>Bebidas Calientes</td>
-                            <td class="text-right">$ 5.500</td>
+                        <tr style="border-bottom: 0.0625rem solid #ddd;">
+                            <td style="padding: 0.75rem;">Café de Origen (Taza)</td>
+                            <td style="padding: 0.75rem;">Sierra Nevada (Suave)</td>
+                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 6.500</td>
                         </tr>
-                        <tr>
-                            <th scope="row">Experiencia Filtrado V60</th>
-                            <td>Métodos Artesanales</td>
-                            <td class="text-right">$ 35.000</td>
+                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
+                            <td style="padding: 0.75rem;">Latte Macondo</td>
+                            <td style="padding: 0.75rem;">Espuma cremosa y toque de vainilla</td>
+                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 9.800</td>
                         </tr>
-                        <tr>
-                            <th scope="row">Cappuccino Cremoso</th>
-                            <td>Bebidas con Leche</td>
-                            <td class="text-right">$ 7.500</td>
+                        <tr style="border-bottom: 0.0625rem solid #ddd;">
+                            <td style="padding: 0.75rem;">Chocolate Artesanal</td>
+                            <td style="padding: 0.75rem;">Cacao de San Vicente con clavos y canela</td>
+                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 8.000</td>
                         </tr>
                     </tbody>
                 </table>
