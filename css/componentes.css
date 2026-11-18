@@ -1,36 +1,38 @@
 /* --- UNIDAD 04 y 05: Componentes y Estados (hover, focus, BEM) --- */
 
-/* Cabecera y Menú de navegación */
+/* Cabecera y Menú de navegación (Enfoque Mobile-First: se apila en celulares) */
 header.header {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 2.5rem 4%;
+    padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-bottom: 0.25rem solid var(--color-accent);
     border-radius: 0 0 0.75rem 0.75rem;
     box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
 }
 
-/* Distribución de dos columnas: Logo a la izquierda, textos a la derecha */
+/* Distribución en celulares: Una sola columna, logo arriba centrado */
 .header__grid {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* Contenedor de los textos perfectamente centrado */
+/* Contenedor de los textos centrado */
 .header__text-container {
     display: grid;
     justify-items: center;
     text-align: center;
+    width: 100%;
 }
 
-/* Logo grande y elegante (10rem) */
+/* Logo adaptable para celulares (9rem) */
 .header__logo {
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     border-radius: 50%;
     object-fit: cover;
     border: 0.3rem solid var(--color-accent);
@@ -38,43 +40,47 @@ header.header {
     display: block;
 }
 
-/* Títulos principales grandes y llamativos */
+/* Títulos optimizados para celulares */
 .header__title {
     font-family: Georgia, serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: var(--color-accent);
     margin: 0 0 0.3rem 0;
     letter-spacing: 0.05rem;
     text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);
+    text-align: center;
+    width: 100%;
 }
 
 .header__subtitle {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-accent);
     margin: 0;
     font-weight: 300;
     letter-spacing: 0.03rem;
+    text-align: center;
+    width: 100%;
 }
 
-/* Menú de navegación PRINCIPAL centrado usando Flexbox */
+/* Menú de navegación adaptable en móviles */
 .nav__list {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0 0 0;
+    margin: 1rem 0 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .nav__link {
     color: var(--color-white);
     text-decoration: none;
     font-weight: 600;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -452,4 +458,52 @@ blockquote footer {
 .footer__copy, .footer__info {
     color: var(--color-text-light);
     margin: 0.25rem 0;
+}
+
+
+/* ===================================================================
+   PANTALLAS GRANDES / COMPUTADOR (Desde 750px / 46.875rem en adelante)
+   El logo grande (12rem) se coloca al lado izquierdo y los títulos 
+   se mantienen perfectamente centrados en su espacio.
+   =================================================================== */
+@media (min-width: 46.875rem) {
+    header.header {
+        padding: 3rem 4%;
+    }
+
+    .header__grid {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .header__text-container {
+        display: grid;
+        justify-items: center; /* Centra perfectamente los títulos en horizontal */
+        text-align: center;    /* Asegura que el texto interno esté centrado */
+        width: 100%;
+    }
+
+    .header__logo {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .header__title {
+        font-size: 3.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header__subtitle {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
 }
