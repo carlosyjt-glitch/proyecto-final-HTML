@@ -468,11 +468,21 @@ blockquote footer {
 
 /* --- Examen 3: Cabecera de guía con gradiente y transparencia --- */
 .guia-header {
-    background-image: linear-gradient(rgba(36, 22, 13, 0.82), rgba(74, 46, 27, 0.88)),
-                      url("../imagenes/banner-macondo.jpg");
+    background-image: linear-gradient(rgba(36, 22, 13, 0.84), rgba(74, 46, 27, 0.9)),
+                      url("../imagenes/Filtrado-V60.jpg");
     background-size: cover;
     background-position: center;
     min-height: 32vh;
+}
+
+.guia-header .header__title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.guia-header .header__subtitle {
+    margin-bottom: 0.25rem;
 }
 
 /* Índice de anclas */
