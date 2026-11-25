@@ -26,6 +26,7 @@
                 <li><a href="carta.html" class="nav__link">Carta</a></li>
                 <li><a href="sedes.html" class="nav__link">Sedes</a></li>
                 <li><a href="reservas.html" aria-current="page" class="nav__link">Reservas</a></li>
+                <li><a href="guia.html" class="nav__link">Guía</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +37,7 @@
             <h2 class="section-title">Reserva Tu Mesa en Café Macondo</h2>
             <p class="section-desc">Aparta tu espacio con anticipación para disfrutar de tus preparaciones favoritas sin esperas. Ideal para encuentros de trabajo, celebraciones íntimas o simplemente garantizar tu rincón favorito de lectura.</p>
             
-            <div class="video-container" style="margin-top: 1.5rem;">
+            <div class="video-container">
                 <video controls class="video-element" poster="imagenes/banner-macondo.jpg">
                     <source src="videos/reserva-mesa.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
@@ -45,12 +46,14 @@
         </section>
 
         <!-- SECCIÓN DEL FORMULARIO DE RESERVA -->
-        <section class="reservas-form-section product-card" style="grid-column: 1 / -1;">
-            <h3 class="product-card__title">Formulario de Solicitud de Reserva</h3>
+        <section class="reservas-form-section product-card">
+            <h2 class="product-card__title">Formulario de Solicitud de Reserva</h2>
             <p class="product-card__desc">Complete los datos requeridos para gestionar su espacio en nuestra sede de preferencia.</p>
 
-            <form action="#" method="POST">
+            <form action="#" method="post">
                 <fieldset class="reserva-fieldset">
+                    <legend class="guia-fieldset__leyenda">Datos de la reserva</legend>
+
                     <div class="form-row-grid">
                         <div class="form-group">
                             <label for="nombre" class="form-label">Nombre completo:</label>
@@ -91,7 +94,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Seleccione la sede de interés:</label>
+                        <span class="form-label">Seleccione la sede de interés:</span>
                         <div class="radio-grid-group">
                             <label class="radio-label">
                                 <input type="radio" name="sede" value="centro" required> Sede Histórica (Centro)
@@ -111,7 +114,7 @@
                         </label>
                     </div>
 
-                    <div class="form-group" style="margin-top: 1.5rem;">
+                    <div class="form-group">
                         <button type="submit" class="btn-submit">Confirmar Solicitud de Reserva</button>
                     </div>
                 </fieldset>
@@ -121,7 +124,7 @@
         <!-- SECCIÓN INFERIOR DE 3 TARJETAS (Beneficios, Glosario, Pasos) -->
         <aside class="reservas-aside-grid">
             <article class="product-card">
-                <h3 class="aside-title">Beneficios de Reservar</h3>
+                <h2 class="aside-title">Beneficios de Reservar</h2>
                 <ul class="aside-list">
                     <li><strong>Atención preferencial:</strong> Tu mesa estará lista al llegar sin filas ni esperas.</li>
                     <li><strong>Rincón garantizado:</strong> Ideal para lectura, trabajo o reuniones privadas.</li>
@@ -130,7 +133,7 @@
             </article>
 
             <article class="product-card">
-                <h3 class="aside-title">Glosario de Términos (Políticas)</h3>
+                <h2 class="aside-title">Glosario de Términos (Políticas)</h2>
                 <dl>
                     <dt>Tolerancia:</dt>
                     <dd>Tiempo máximo de espera guardando la mesa reservada (15 minutos).</dd>
@@ -142,7 +145,7 @@
             </article>
 
             <article class="product-card">
-                <h3 class="aside-title">Pasos de Confirmación</h3>
+                <h2 class="aside-title">Pasos de Confirmación</h2>
                 <ol class="aside-ol">
                     <li>Completas el formulario con tus datos y preferencias.</li>
                     <li>Recibes una notificación automática en tu correo electrónico.</li>

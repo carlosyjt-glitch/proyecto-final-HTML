@@ -26,16 +26,15 @@
                 <li><a href="carta.html" aria-current="page" class="nav__link">Carta</a></li>
                 <li><a href="sedes.html" class="nav__link">Sedes</a></li>
                 <li><a href="reservas.html" class="nav__link">Reservas</a></li>
+                <li><a href="guia.html" class="nav__link">Guía</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-container">
-
-
-        <!-- ÍNDICE DE NAVEGACIÓN RÁPIDA (Anclas internas centradas) -->
+        <!-- ÍNDICE DE NAVEGACIÓN RÁPIDA -->
         <nav class="carta-indice" aria-label="Índice de la carta">
-            <h3 class="carta-indice__title">Salto rápido a secciones:</h3>
+            <h2 class="carta-indice__title">Salto rápido a secciones</h2>
             <ul class="carta-indice__list">
                 <li><a href="#servicio">El Arte del Servicio</a></li>
                 <li><a href="#especialidades">Especialidades</a></li>
@@ -56,10 +55,9 @@
             </div>
         </section>
 
-
         <!-- SECCIÓN 1: EL ARTE DEL SERVICIO -->
         <section id="servicio" class="product-card">
-            <h3 class="product-card__title">El Arte del Servicio</h3>
+            <h2 class="product-card__title">El Arte del Servicio</h2>
             <p class="product-card__desc">Cada grano es seleccionado minuciosamente de cultivos de origen colombiano, garantizando una taza llena de notas aromáticas inigualables y un proceso tostado artesanal.</p>
             
             <dl>
@@ -95,51 +93,50 @@
         </section>
 
         <!-- SECCIÓN 3: TABLA DE PRECIOS COMPLETA -->
-        <section id="precios" class="product-card" style="grid-column: 1 / -1;">
-            <h3 class="product-card__title">Tabla de Precios y Preparaciones</h3>
+        <section id="precios" class="product-card carta-precios">
+            <h2 class="product-card__title">Tabla de Precios y Preparaciones</h2>
             <p class="product-card__desc">Consulte el valor consolidado de todas nuestras bebidas, especialidades y acompañamientos artesanales.</p>
             
-            <div class="table-container" style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+            <div class="table-container">
+                <table class="carta-tabla">
+                    <caption>Listado de precios en pesos colombianos (COP)</caption>
                     <thead>
-                        <tr style="background-color: var(--color-primary); color: var(--color-white);">
-                            <th scope="col" style="padding: 0.75rem; text-align: left;">Preparación</th>
-                            <th scope="col" style="padding: 0.75rem; text-align: left;">Origen / Detalle</th>
-                            <th scope="col" style="padding: 0.75rem; text-align: right;">Valor (COP)</th>
+                        <tr>
+                            <th scope="col">Preparación</th>
+                            <th scope="col">Origen / Detalle</th>
+                            <th scope="col">Valor (COP)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Productos de las tarjetas superiores -->
-                        <tr style="border-bottom: 0.0625rem solid #ddd;">
-                            <td style="padding: 0.75rem; font-weight: 600;">Expreso Doble Aureliano</td>
-                            <td style="padding: 0.75rem;">Intenso, cuerpo denso y frutos rojos</td>
-                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 8.500</td>
+                        <tr>
+                            <td>Expreso Doble Aureliano</td>
+                            <td>Intenso, cuerpo denso y frutos rojos</td>
+                            <td>$ 8.500</td>
                         </tr>
-                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
-                            <td style="padding: 0.75rem; font-weight: 600;">Capuchino Remedios</td>
-                            <td style="padding: 0.75rem;">Espuma terciopelada y cacao fino</td>
-                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 10.200</td>
+                        <tr>
+                            <td>Capuchino Remedios</td>
+                            <td>Espuma terciopelada y cacao fino</td>
+                            <td>$ 10.200</td>
                         </tr>
-                        <tr style="border-bottom: 0.0625rem solid #ddd;">
-                            <td style="padding: 0.75rem; font-weight: 600;">Almojábana Tradicional</td>
-                            <td style="padding: 0.75rem;">Queso campesino y maíz fresco</td>
-                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 6.000</td>
+                        <tr>
+                            <td>Almojábana Tradicional</td>
+                            <td>Queso campesino y maíz fresco</td>
+                            <td>$ 6.000</td>
                         </tr>
-                        <!-- Bebidas adicionales de la tabla anterior -->
-                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
-                            <td style="padding: 0.75rem;">Café de Origen (Taza)</td>
-                            <td style="padding: 0.75rem;">Sierra Nevada (Suave)</td>
-                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 6.500</td>
+                        <tr>
+                            <td>Café de Origen (Taza)</td>
+                            <td>Sierra Nevada (Suave)</td>
+                            <td>$ 6.500</td>
                         </tr>
-                        <tr style="border-bottom: 0.0625rem solid #ddd;">
-                            <td style="padding: 0.75rem;">Latte Macondo</td>
-                            <td style="padding: 0.75rem;">Espuma cremosa y toque de vainilla</td>
-                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 9.800</td>
+                        <tr>
+                            <td>Latte Macondo</td>
+                            <td>Espuma cremosa y toque de vainilla</td>
+                            <td>$ 9.800</td>
                         </tr>
-                        <tr style="border-bottom: 0.0625rem solid #ddd; background-color: rgba(0,0,0,0.02);">
-                            <td style="padding: 0.75rem;">Chocolate Artesanal</td>
-                            <td style="padding: 0.75rem;">Cacao de San Vicente con clavos y canela</td>
-                            <td style="padding: 0.75rem; text-align: right; font-weight: 600;">$ 8.000</td>
+                        <tr>
+                            <td>Chocolate Artesanal</td>
+                            <td>Cacao de San Vicente con clavos y canela</td>
+                            <td>$ 8.000</td>
                         </tr>
                     </tbody>
                 </table>
