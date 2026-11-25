@@ -1,6 +1,6 @@
 /* --- UNIDAD 04 y 05: Componentes y Estados (hover, focus, BEM) --- */
 
-/* Cabecera y Menú de navegación (Enfoque Mobile-First: se apila en celulares) */
+/* Cabecera y Menú de navegación (se apila en celulares) */
 header.header {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -8,7 +8,7 @@ header.header {
     margin-bottom: 2rem;
     border-bottom: 0.25rem solid var(--color-accent);
     border-radius: 0 0 0.75rem 0.75rem;
-    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
 }
 
 /* Distribución en celulares: Una sola columna, logo arriba centrado */
@@ -36,7 +36,7 @@ header.header {
     border-radius: 50%;
     object-fit: cover;
     border: 0.3rem solid var(--color-accent);
-    box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.5);
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.5);
     display: block;
 }
 
@@ -47,7 +47,7 @@ header.header {
     color: var(--color-accent);
     margin: 0 0 0.3rem 0;
     letter-spacing: 0.05rem;
-    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.4);
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
     text-align: center;
     width: 100%;
 }
@@ -63,14 +63,14 @@ header.header {
     width: 100%;
 }
 
-/* Menú de navegación adaptable en móviles */
+/* Menú de navegación adaptable en Grid (sin Flexbox) */
 .nav__list {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    justify-items: center;
     gap: 1rem;
 }
 
@@ -110,25 +110,28 @@ header.header {
 }
 
 .banner-principal__img {
+    max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
 }
 
 /* --- CLASE GLOBAL PARA CENTRAR SECCIONES E INTRODUCCIONES --- */
-.section-intro, 
-.video-section, 
-.reservas-intro {
+.section-intro,
+.video-section,
+.reservas-intro,
+.guia-intro {
     grid-column: 1 / -1;
-    text-align: center !important;
+    text-align: center;
     margin-bottom: 2rem;
 }
 
 .section-intro h2,
 .section-intro .section-title,
 .video-section h2,
-.video-section .section-title {
-    text-align: center !important;
+.video-section .section-title,
+.guia-intro .section-title {
+    text-align: center;
     font-family: Georgia, serif;
     font-size: 2.2rem;
     color: var(--color-primary);
@@ -138,11 +141,12 @@ header.header {
 .section-intro p,
 .video-section p,
 .video-section .section-desc,
-.reservas-intro .section-desc {
-    text-align: center !important;
+.reservas-intro .section-desc,
+.guia-intro .section-desc {
+    text-align: center;
     max-width: 45rem;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -163,6 +167,7 @@ header.header {
 }
 
 .product-card__img {
+    max-width: 100%;
     width: 100%;
     height: 12rem;
     object-fit: cover;
@@ -235,7 +240,7 @@ fieldset.reserva-fieldset {
 .form-input, .form-select, .form-textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 0.0625rem solid #ccc;
+    border: 0.0625rem solid var(--color-secondary);
     border-radius: 0.375rem;
     font-family: inherit;
     font-size: 1rem;
@@ -244,21 +249,21 @@ fieldset.reserva-fieldset {
 
 .form-row-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 1.5rem;
     margin-bottom: 1.25rem;
 }
 
 .radio-grid-group {
     display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1rem;
 }
 
 .radio-label, .checkbox-label {
     font-weight: normal;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 0.5rem;
     color: var(--color-text);
@@ -270,6 +275,7 @@ fieldset.reserva-fieldset {
 }
 
 .sede-img {
+    max-width: 100%;
     width: 100%;
     height: 14rem;
     object-fit: cover;
@@ -316,7 +322,7 @@ fieldset.reserva-fieldset {
 .video-section {
     grid-column: 1 / -1;
     margin-bottom: 3rem;
-    text-align: center !important;
+    text-align: center;
 }
 
 .video-container {
@@ -324,11 +330,12 @@ fieldset.reserva-fieldset {
     margin: 1.5rem auto 0 auto;
     border-radius: 0.75rem;
     overflow: hidden;
-    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
     border: 0.125rem solid var(--color-accent);
 }
 
 .video-element {
+    max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
@@ -357,9 +364,8 @@ fieldset.reserva-fieldset {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
 }
 
 .carta-indice__list a {
@@ -460,10 +466,148 @@ blockquote footer {
     margin: 0.25rem 0;
 }
 
+/* --- Examen 3: Cabecera de guía con gradiente y transparencia --- */
+.guia-header {
+    background-image: linear-gradient(rgba(36, 22, 13, 0.82), rgba(74, 46, 27, 0.88)),
+                      url("../imagenes/banner-macondo.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 32vh;
+}
+
+/* Índice de anclas */
+.guia-indice__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+/* Selector de atributo (E3-RF-11) y estados hover/focus (E3-RF-12) */
+.guia-indice__lista a[href^="#"] {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+.guia-indice__lista a[href^="#"]:hover {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.guia-indice__lista a[href^="#"]:focus {
+    outline: 0.1875rem solid var(--color-focus);
+    outline-offset: 0.125rem;
+}
+
+/* Combinador hijo directo (E3-RF-11): título directo de cada método */
+.metodo > .metodo__titulo {
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.metodo__subtitulo {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.metodo__figura {
+    margin: 0 0 1.25rem 0;
+    width: 100%;
+}
+
+.metodo__imagen {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+    display: block;
+}
+
+.metodo__pie {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Pseudoclase :not() (E3-RF-11): resalta métodos no marcados como destacados */
+.metodo:not(.metodo--destacado) {
+    border-top: 0.1875rem solid var(--color-secondary);
+}
+
+.metodo--destacado {
+    border-top: 0.1875rem solid var(--color-accent);
+}
+
+/* Aside de consejos del barista (E3-RF-15) */
+.consejos-barista {
+    background-color: var(--color-card-bg);
+    border: 0.0625rem solid var(--color-secondary);
+    border-left: 0.25rem solid var(--color-accent);
+    border-radius: 0.5rem;
+    padding: 1.75rem;
+}
+
+.consejos-barista__titulo {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.consejos-barista__lista {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.consejos-barista__lista li {
+    margin-bottom: 0.5rem;
+}
+
+/* Hermano adyacente (+) (E3-RF-11): separa el elemento siguiente al título de sección */
+.comparacion__titulo + .table-container,
+.glosario__titulo + .glosario__lista {
+    margin-top: 1rem;
+}
+
+/* Filas alternas con :nth-child() en tabla de comparación (E3-RF-12) */
+.comparacion__tabla tbody tr:nth-child(even) {
+    background-color: var(--color-bg);
+}
+
+/* Leyendas y grupos del formulario */
+.guia-fieldset {
+    border: 0.0625rem solid var(--color-secondary);
+    border-radius: 0.375rem;
+    padding: 1.25rem;
+    margin: 0;
+}
+
+.guia-fieldset--anidado {
+    margin-bottom: 1.25rem;
+}
+
+.guia-fieldset__leyenda {
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
 
 /* ===================================================================
-   PANTALLAS GRANDES / COMPUTADOR (Desde 750px / 46.875rem en adelante)
-   El logo grande (12rem) se coloca al lado izquierdo y los títulos 
+   PANTALLAS GRANDES / COMPUTADOR
+   El logo grande (12rem) se coloca al lado izquierdo y los títulos
    se mantienen perfectamente centrados en su espacio.
    =================================================================== */
 @media (min-width: 46.875rem) {
@@ -479,8 +623,8 @@ blockquote footer {
 
     .header__text-container {
         display: grid;
-        justify-items: center; /* Centra perfectamente los títulos en horizontal */
-        text-align: center;    /* Asegura que el texto interno esté centrado */
+        justify-items: center;
+        text-align: center;
         width: 100%;
     }
 
@@ -502,7 +646,8 @@ blockquote footer {
     }
 
     .nav__list {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
         justify-content: center;
         gap: 2rem;
     }
