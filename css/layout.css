@@ -14,13 +14,13 @@ header, footer {
 }
 
 /* Asegurar que las secciones principales y galerías abarquen todo el ancho disponible del grid */
-.main-container > section, 
-.card-grid, 
-.sedes-section, 
-.video-section, 
-.table-section, 
-.reservas-intro, 
-.reservas-form-section, 
+.main-container > section,
+.card-grid,
+.sedes-section,
+.video-section,
+.table-section,
+.reservas-intro,
+.reservas-form-section,
 .reservas-aside-grid {
     grid-column: 1 / -1;
 }
@@ -31,7 +31,7 @@ header, footer {
     display: grid;
     place-content: center;
     text-align: center;
-    background: linear-gradient(rgba(44, 29, 17, 0.8), rgba(44, 29, 17, 0.8)), 
+    background: linear-gradient(rgba(44, 29, 17, 0.8), rgba(44, 29, 17, 0.8)),
                 url('../../imagenes/fondo-textura.jpg');
     color: var(--color-white);
     border-radius: 0.5rem;
@@ -49,9 +49,9 @@ header, footer {
 
 /* --- ESTILO PARA EL ASIDE DE RESERVAS EN TRES COLUMNAS --- */
 .reservas-aside-grid {
-    grid-column: 1 / -1; /* Ocupa todo el ancho de la pantalla */
+    grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Distribuye las 3 tarjetas en horizontal */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -59,6 +59,11 @@ header, footer {
 /* Unidad 07.4: Bloque que destaca abarcando espacio */
 .bloque-destacado {
     grid-column: span 1;
+}
+
+/* Tabla de precios de carta.html a ancho completo */
+.carta-precios {
+    grid-column: 1 / -1;
 }
 
 
@@ -85,5 +90,61 @@ header, footer {
 
     .bloque-destacado {
         grid-column: span 2;
+    }
+}
+
+
+/* ===================================================================
+   EXAMEN 3 — GUÍA PARA PREPARAR CAFÉ EN CASA (guia.html)
+   =================================================================== */
+
+/* Móvil primero: una columna en la hoja base */
+.guia-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.guia-intro,
+.guia-indice,
+.comparacion,
+.glosario,
+.guia-formulario {
+    grid-column: 1 / -1;
+}
+
+.guia-main > .metodo {
+    grid-column: span 1;
+}
+
+/* A 600 px (37.5rem): dos columnas; el tercer método ocupa dos columnas (span 2) */
+@media (min-width: 37.5rem) {
+    .guia-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guia-main > .metodo--tercero {
+        grid-column: span 2;
+    }
+
+    .consejos-barista {
+        grid-column: 1 / -1;
+    }
+}
+
+/* A 900 px o más (56.25rem): tres columnas; los tres métodos van uno por columna */
+@media (min-width: 56.25rem) {
+    .guia-main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .guia-main > .metodo,
+    .guia-main > .metodo--tercero {
+        grid-column: span 1;
+    }
+
+    .consejos-barista {
+        grid-column: span 1;
     }
 }
