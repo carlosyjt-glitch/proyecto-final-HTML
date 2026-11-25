@@ -1,4 +1,27 @@
-# Proyecto Final — Sitio Web Adaptable: Café Macondo
+## Examen 3 — Guía para preparar café en casa
+
+### 1. Cambios realizados y hojas de estilo modificadas
+Se agregó la página `guia.html` con el índice de anclas, los tres métodos de preparación (prensa francesa, filtro y moka) con ingredientes y pasos, el bloque `aside` de consejos del barista con cita, la tabla comparativa, el glosario y el formulario «Recibir la guía», además de agregar el enlace «Guía» en el menú de las cinco páginas. Se modificaron `css/tipografia.css`, `css/componentes.css` y `css/layout.css` (y se actualizó el menú en los HTML).
+
+### 2. Tabla de medidas de `guia.html`
+
+| Ancho de ventana | Columnas en grilla principal | Desplazamiento horizontal |
+| :--- | :--- | :--- |
+| **500 px** | 1 columna | No |
+| **800 px** | 2 columnas (`metodo--tercero` con `span 2`) | No |
+| **1200 px** | 3 columnas (`metodo` uno por columna) | No |
+
+### 3. Tres selectores utilizados y por qué
+- **Selector de atributo (`a[href^="#"]`):** Aplica estilos a los enlaces internos del índice que apuntan a anclas de la misma página.
+- **Combinador hijo directo (`.metodo > .metodo__titulo`):** Aplica estilo exclusivamente al título principal directo de cada sección de método.
+- **Pseudoclase `:not(.metodo--destacado)`:** Aplica borde superior secundario a los métodos que no tienen la clase modificadora `.metodo--destacado`.
+
+### 4. Dificultad y resolución
+La regla general `.main-container > section { grid-column: 1 / -1; }` podía competir con la distribución en columnas de los métodos en `guia.html`. Se resolvió definiendo `.guia-main > .metodo` con `span 1`, `.guia-main > .metodo--tercero` con `span 2` a `37.5rem` (600 px) y `span 1` a `56.25rem` (900 px), verificando luego en el navegador a 500 px, 800 px y 1200 px sin desplazamiento horizontal.
+
+
+
+# Proyecto Final — Sitio Web Adaptable: Cafsé Macondo
 
 - **Estudiante:** Carlos Yovanny Jaimes
 - **Proyecto:** Sitio web multipágina para la cafetería de especialidad Café Macondo.
@@ -48,3 +71,5 @@ El sitio consta de cuatro páginas interconectadas mediante un menú de navegaci
   - *Resolución:* Se solucionó envolviendo la etiqueta `table` dentro de un contenedor dedicado (`.table-container`) con la propiedad CSS `overflow-x: auto`, permitiendo un desplazamiento interno fluido sin romper el diseño de la página.
 - **Dificultad 2:** La distribución inicial de los bloques informativos inferiores en la página de reservas se apilaba verticalmente en una sola columna estrecha en pantallas grandes.
   - *Resolución:* Se reestructuró el componente utilizando la clase `.card` y un contenedor Grid adaptable con `repeat(auto-fit, minmax(18rem, 1fr))`, logrando que se desplieguen armónicamente en tres columnas horizontales en computadores de escritorio.
+
+ 
